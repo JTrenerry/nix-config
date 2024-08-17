@@ -73,7 +73,7 @@
 
   home.shellAliases.v = "nvim";
 
-  programs.neovim = {
+  programs.nixvim = {
     enable = true;
 
     defaultEditor = true;
@@ -89,10 +89,10 @@
       byteCompileLua.enable = true;
     };
 
-
-
     viAlias = true;
     vimAlias = true;
+
+    lualoader.enable = true;
   };
 
 
