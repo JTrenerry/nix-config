@@ -8,8 +8,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    nixvim.url = "github:nix-community/nixvim";
+    
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      # url = "/home/gaetan/perso/nix/nixvim/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, ... }@inputs: {

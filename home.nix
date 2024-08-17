@@ -68,20 +68,32 @@
   #  /etc/profiles/per-user/jackson/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    EDITOR = "nvim";
+    # EDITOR = "nvim";
   };
 
-  let
-    nixvim = pkgs.callPackage inputs.nixvim {};
-  in
-  {
-    programs.neovim = {
-      enable = true;
-      viAlias = true;
-      vimAlias = true;
-      package = nixvim.neovim;
+  home.shellAliases.v = "nvim";
+
+  programs.neovim = {
+    enable = true;
+
+    defaultEditor = true;
+
+    performance = {
+      combinePlugins = {
+        enable = true;
+        standalonePlugins = [
+          "hmts.nvim"
+          "nvim-treesitter"
+        ];
+      };
+      byteCompileLua.enable = true;
     };
-  }
+
+
+
+    viAlias = true;
+    vimAlias = true;
+  };
 
 
   # Let Home Manager install and manage itself.
