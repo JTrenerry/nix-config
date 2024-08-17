@@ -1,6 +1,9 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
+  imports = [
+    inputs.nixvim.homeManagerModules.nixvim
+  ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "jackson";
@@ -78,6 +81,12 @@
 
     defaultEditor = true;
 
+    plugins = {
+      treesitter = {
+	enable = true;
+      };
+    };
+
     performance = {
       combinePlugins = {
         enable = true;
@@ -91,8 +100,6 @@
 
     viAlias = true;
     vimAlias = true;
-
-    lualoader.enable = true;
   };
 
 

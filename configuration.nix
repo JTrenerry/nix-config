@@ -111,7 +111,7 @@
     # also pass inputs to home-manager modules
     extraSpecialArgs = { inherit inputs; };
     users = {
-      "yurii" = import ./home.nix;
+      "jackson" = import ./home.nix;
     };
   };
 
