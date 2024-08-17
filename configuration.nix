@@ -105,6 +105,8 @@
     borgbackup
     firefox
     git
+    cloudflared
+    discord
   ];
 
   home-manager = {
