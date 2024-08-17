@@ -106,7 +106,14 @@
     firefox
     git
     cloudflared
+    neofetch
     discord
+    docker-compose
+    docker
+    rnnoise-plugin
+
+    python3
+    python3Packages.pyelftools
   ];
 
   home-manager = {
