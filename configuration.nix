@@ -98,22 +98,34 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    # IDEs
     neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    jetbrains.idea-ultimate
+    
+    #Util
     wget
-    kitty
-    kittysay
-    borgbackup
-    firefox
     git
     cloudflared
-    neofetch
-    discord
+    vesktop
     docker-compose
     docker
-    rnnoise-plugin
+    libreoffice-qt6-still
+    zoom-us
+   
+    # Important Misc
+    kitty
+    borgbackup
+    firefox
 
+    # Languages
+    #Python
     python3
     python3Packages.pyelftools
+
+    # Misc
+    kittysay
+    neofetch
+    spotify
   ];
 
   home-manager = {
