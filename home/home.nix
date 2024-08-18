@@ -2,6 +2,7 @@
 
 {
   imports = [
+    
     inputs.nixvim.homeManagerModules.nixvim
   ];
   # Home Manager needs a bit of information about you and the paths it should
@@ -20,12 +21,12 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
 
-    # # It is sometimes useful to fine-tune packages, for example, by applying
+    # # It is sometimes useful to fine-tune packages, for e:xample, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
@@ -37,6 +38,13 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    
+    # NOTE: anything only this user i.e. jackson will need goes here
+    vesktop
+    spotify
+    kittysay
+    neofetch
+
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

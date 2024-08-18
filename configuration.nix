@@ -4,6 +4,9 @@
 
 { config, pkgs, inputs, ... }:
 
+let
+  packages = import ./packages.nix { inherit pkgs; };
+in
 {
   imports =
     [ # Include the results of the hardware scan.
@@ -92,47 +95,16 @@
   # Install firefox.
   programs.firefox.enable = true;
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    # IDEs
-    neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    jetbrains.idea-ultimate
-    
-    #Util
-    wget
-    git
-    cloudflared
-    vesktop
-    docker-compose
-    docker
-    libreoffice-qt6-still
-    zoom-us
-   
-    # Important Misc
-    kitty
-    borgbackup
-    firefox
-
-    # Languages
-    #Python
-    python3
-    python3Packages.pyelftools
-
-    # Misc
-    kittysay
-    neofetch
-    spotify
-  ];
+  # Get packages from ./nixos/packages.nix
+  environment.systemPackages = packages;
+  nixpkgs.config.allowUnfree = true; # Allows unfree packages
 
   home-manager = {
     # also pass inputs to home-manager modules
     extraSpecialArgs = { inherit inputs; };
     users = {
-      "jackson" = import ./home.nix;
+      "jackson" = import ./home/home.nix;
     };
   };
 
