@@ -2,7 +2,9 @@
 
 {
   imports = [
+    ./shell # Aliases etc.
     
+
     inputs.nixvim.homeManagerModules.nixvim
   ];
   # Home Manager needs a bit of information about you and the paths it should
@@ -78,8 +80,6 @@
     # EDITOR = "vim";
   };
 
-  home.shellAliases.v = "nvim";
-
   programs.nixvim = {
     enable = true;
 
@@ -143,7 +143,6 @@
     viAlias = true;
     vimAlias = true;
   };
-
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

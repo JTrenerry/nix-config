@@ -5,7 +5,7 @@
 { config, pkgs, inputs, ... }:
 
 let
-  packages = import ./packages.nix { inherit pkgs; };
+  packages = import ./nixos/packages.nix { inherit pkgs; };
 in
 {
   imports =
