@@ -40,10 +40,6 @@
     # '')
     
     # NOTE: anything only this user i.e. jackson will need goes here
-    vesktop
-    spotify
-    kittysay
-    neofetch
 
   ];
 
