@@ -3,6 +3,8 @@
 {
   imports = [
     # TODO Import new tui modules here
+    ./tmux.nix
+
     ./shell
     ./neovim
   ];
