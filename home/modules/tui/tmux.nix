@@ -19,7 +19,7 @@
     shortcut = "a";
 
     plugins = with pkgs.tmuxPlugins; [
-      rose-pine
+      nord
     ];
 
     extraConfig = ''
@@ -38,9 +38,6 @@
       # auto window rename
       set -g automatic-rename
       set -g automatic-rename-format '#{pane_current_command}'
-
-      # nord theme config
-
     '';
   };
 
