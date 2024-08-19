@@ -102,7 +102,7 @@
     # also pass inputs to home-manager modules
     extraSpecialArgs = { inherit inputs; };
     users = {
-      "jackson" = import ../../../home/home.nix;
+      "jackson" = import ../../../home/hosts/glaceon/default.nix;
     };
   };
 

@@ -4,9 +4,9 @@
 #    ./autocommands.nix
  #   ./completion.nix
   #  ./keymappings.nix
-   # ./options.nix
+    ./options.nix
     ./plugins
-   # ./todo.nix
+    ./todo.nix
   ];
 
   home.shellAliases.v = "nvim";
