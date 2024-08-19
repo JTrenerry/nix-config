@@ -19,7 +19,7 @@
     shortcut = "a";
 
     plugins = with pkgs.tmuxPlugins; [
-      rose-pine
+      nord
     ];
 
     extraConfig = ''
