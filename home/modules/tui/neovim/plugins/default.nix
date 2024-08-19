@@ -18,8 +18,9 @@
 
   programs.nixvim = {
 
-    colorschemes.nord = {
+    colorschemes.nightfox = {
       enable = true;
+      flavor = "duskfox";
     };
 
     plugins = {
