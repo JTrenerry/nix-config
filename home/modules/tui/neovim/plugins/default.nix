@@ -18,10 +18,6 @@
   ];
 
   programs.nixvim = {
-    colorschemes.rose-pine = {
-      enable = true;
-      settings.dark_variant = "moon";
-    };
 
     plugins = {
       # TODO: simple plugin configs can go here though
