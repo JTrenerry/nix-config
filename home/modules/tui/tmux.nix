@@ -40,7 +40,7 @@
       set -g automatic-rename-format '#{pane_current_command}'
 
       # rose-pine config
-      set -g @rose_pine_variant 'moon'
+
     '';
   };
 
