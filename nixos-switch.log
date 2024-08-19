@@ -22,4 +22,4 @@ error:
 
        (stack trace truncated; use '--show-trace' to show the full trace)
 
-       error: getting status of '/nix/store/kbgwy45y7rs4dka0579ahjrxhar65j9y-source/home/hosts': No such file or directory
+       error: getting status of '/nix/store/7hz86s3gr55lzlpz8gh1zr9dv5w3a0bn-source/home/modules/tui/neovim/plugins/floaterm.nix': No such file or directory
