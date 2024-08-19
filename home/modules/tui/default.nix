@@ -3,6 +3,7 @@
 {
   imports = [
     # TODO Import new tui modules here
+    ./git.nix
     ./tmux.nix
 
     ./shell
