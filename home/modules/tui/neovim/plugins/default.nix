@@ -6,7 +6,6 @@
     ./floaterm.nix
     ./harpoon.nix
     ./lsp.nix
-    ./lualine.nix
     ./markdown-preview.nix
     ./neorg.nix
     ./neo-tree.nix
@@ -18,6 +17,10 @@
   ];
 
   programs.nixvim = {
+
+    colorschemes.nord = {
+      enable = true;
+    };
 
     plugins = {
       # TODO: simple plugin configs can go here though
@@ -31,10 +34,10 @@
 
       nvim-autopairs.enable = true;
 
-      nvim-colorizer = {
-        enable = true;
-        userDefaultOptions.names = false;
-      };
+            #    nvim-colorizer = {
+            #      enable = true;
+            #      userDefaultOptions.names = false;
+            #    };
 
       oil.enable = true;
 
