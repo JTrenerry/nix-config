@@ -1,7 +1,6 @@
 {
   description = "Multi Host (soon) Nix/Flake/Home-Manager Config";
 
-
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
