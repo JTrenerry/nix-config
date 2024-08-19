@@ -1,4 +1,4 @@
-{ config, pkgs }:
+{ config, pkgs, inputs, ... }:
 
 # Packages that are needed for the entire system are to be installed here.
 

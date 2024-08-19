@@ -1,23 +1,12 @@
 warning: Git tree '/home/jackson/Documents/Code/nix' is dirty
-error:
-       … while calling the 'seq' builtin
-
-         at /nix/store/sfycwi72zfjsspidinx56ajaiffpyh17-source/lib/modules.nix:334:18:
-
-          333|         options = checked options;
-          334|         config = checked (removeAttrs config [ "_module" ]);
-             |                  ^
-          335|         _module = checked (config._module);
-
-       … while evaluating a branch condition
-
-         at /nix/store/sfycwi72zfjsspidinx56ajaiffpyh17-source/lib/modules.nix:273:9:
-
-          272|       checkUnmatched =
-          273|         if config._module.check && config._module.freeformType == null && merged.unmatchedDefns != [] then
-             |         ^
-          274|           let
-
-       (stack trace truncated; use '--show-trace' to show the full trace)
-
-       error: getting status of '/nix/store/h2liv7a6hhxm8q5nkbjq6391axw0s05n-source/nixos/hosts': No such file or directory
+building the system configuration...
+warning: Git tree '/home/jackson/Documents/Code/nix' is dirty
+stopping the following units: accounts-daemon.service
+activating the configuration...
+setting up /etc...
+reloading user units for jackson...
+restarting sysinit-reactivation.target
+reloading the following units: dbus.service
+restarting the following units: home-manager-jackson.service, polkit.service
+starting the following units: accounts-daemon.service
+the following new units were started: run-credentials-systemd\x2dtmpfiles\x2dresetup.service.mount, sysinit-reactivation.target, systemd-tmpfiles-resetup.service

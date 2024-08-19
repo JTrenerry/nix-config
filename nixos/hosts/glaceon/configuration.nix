@@ -96,10 +96,6 @@
   # Install firefox.
   programs.firefox.enable = true;
 
-
-  # Get packages from ./nixos/packages.nix
-  environment.systemPackages = packages;
-  
   nixpkgs.config.allowUnfree = true; # Allows unfree packages
 
   home-manager = {
