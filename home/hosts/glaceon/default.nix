@@ -3,6 +3,6 @@
 {
   imports = [
     ../../modules/tui
-    ../../modules/gui
+#    ../../modules/gui
   ];
 }
