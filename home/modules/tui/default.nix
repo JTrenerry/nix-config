@@ -14,6 +14,8 @@
     home-manager.enable = true;
   };
 
+  fonts.fontconfig.enable = true;
+
   home = {
     stateVersion = "24.05"; # Do not touch
 
@@ -25,12 +27,13 @@
 
 
 
+      (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
+
       #TODO: Install new user packages here
     ];
 
     sessionVariables = {
       EDITOR = "nvim";
     };
-
   };
 }
