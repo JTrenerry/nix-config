@@ -19,7 +19,7 @@
     nixosConfigurations.default = nixpkgs.lib.nixosSystem {
       specialArgs = {inherit inputs;};
       modules = [
-        ./configuration.nix
+        ./nixos/hosts/glaceon/configuration.nix
         inputs.home-manager.nixosModules.default
       ];
     };

@@ -4,12 +4,13 @@
 
 { config, pkgs, inputs, ... }:
 
-let
-  packages = import ./nixos/packages.nix { inherit pkgs; };
-in
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [
+      ./packages.nix  # System wide packages
+
+
+      # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
 
@@ -105,7 +106,7 @@ in
     # also pass inputs to home-manager modules
     extraSpecialArgs = { inherit inputs; };
     users = {
-      "jackson" = import ./home/home.nix;
+      "jackson" = import ../../../home/home.nix;
     };
   };
 
