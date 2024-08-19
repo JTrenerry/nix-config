@@ -19,7 +19,7 @@
     shortcut = "a";
 
     plugins = with pkgs.tmuxPlugins; [
-      gruvbox
+      rose-pine
     ];
 
     extraConfig = ''
@@ -38,6 +38,9 @@
       # auto window rename
       set -g automatic-rename
       set -g automatic-rename-format '#{pane_current_command}'
+
+      # rose-pine config
+      set -g @rose_pine_variant 'moon'
     '';
   };
 
