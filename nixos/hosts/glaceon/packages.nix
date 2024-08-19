@@ -30,6 +30,7 @@
     kittysay
     neofetch
     spotify
+    libnotify # Rebuild script
   ];
 }
 

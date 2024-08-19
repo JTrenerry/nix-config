@@ -7,6 +7,5 @@ setting up /etc...
 reloading user units for jackson...
 restarting sysinit-reactivation.target
 reloading the following units: dbus.service
-restarting the following units: home-manager-jackson.service, polkit.service
+restarting the following units: polkit.service
 starting the following units: accounts-daemon.service
-the following new units were started: run-credentials-systemd\x2dtmpfiles\x2dresetup.service.mount, sysinit-reactivation.target, systemd-tmpfiles-resetup.service
