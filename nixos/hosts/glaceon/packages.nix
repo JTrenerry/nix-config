@@ -8,6 +8,7 @@
     wl-clipboard
     xdg-utils
     webcord
+    xwaylandvideobridge
     # DO NOT ADD SHIT HERE
   ];
 }
