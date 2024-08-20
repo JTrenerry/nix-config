@@ -1,23 +1,25 @@
 warning: Git tree '/home/jackson/Documents/Code/nix' is dirty
 building the system configuration...
 warning: Git tree '/home/jackson/Documents/Code/nix' is dirty
-these 7 derivations will be built:
-  /nix/store/pqiql65rd8i7lzayr3hcgh468l2lgbb3-bashrc.drv
-  /nix/store/lyr8sgv1abdzs9lq8x9zf6d6y9hf35jx-home-manager-files.drv
-  /nix/store/7si85lx8df5y1cqxhvkwkg86n5dx2ppk-home-manager-generation.drv
-  /nix/store/g2q7mihmya6kwdv25pl4dyya0hzfg05m-unit-home-manager-jackson.service.drv
-  /nix/store/3f0sm1n3rk9xvavkl1hh8m9dsn18gcpn-system-units.drv
-  /nix/store/cap7p3aq7w31b6mprd9iw3w1vkl0kphq-etc.drv
-  /nix/store/3rszc16lpx7hvp3c8pinpjc0zi5194ac-nixos-system-glaceon-24.11.20240814.c3aa7b8.drv
-building '/nix/store/pqiql65rd8i7lzayr3hcgh468l2lgbb3-bashrc.drv'...
-building '/nix/store/lyr8sgv1abdzs9lq8x9zf6d6y9hf35jx-home-manager-files.drv'...
-building '/nix/store/7si85lx8df5y1cqxhvkwkg86n5dx2ppk-home-manager-generation.drv'...
-building '/nix/store/g2q7mihmya6kwdv25pl4dyya0hzfg05m-unit-home-manager-jackson.service.drv'...
-building '/nix/store/3f0sm1n3rk9xvavkl1hh8m9dsn18gcpn-system-units.drv'...
-building '/nix/store/cap7p3aq7w31b6mprd9iw3w1vkl0kphq-etc.drv'...
-building '/nix/store/3rszc16lpx7hvp3c8pinpjc0zi5194ac-nixos-system-glaceon-24.11.20240814.c3aa7b8.drv'...
-activating the configuration...
-setting up /etc...
-reloading user units for jackson...
-restarting sysinit-reactivation.target
-restarting the following units: home-manager-jackson.service
+error:
+       … while calling the 'head' builtin
+
+         at /nix/store/sfycwi72zfjsspidinx56ajaiffpyh17-source/lib/attrsets.nix:1575:11:
+
+         1574|         || pred here (elemAt values 1) (head values) then
+         1575|           head values
+             |           ^
+         1576|         else
+
+       … while evaluating the attribute 'value'
+
+         at /nix/store/sfycwi72zfjsspidinx56ajaiffpyh17-source/lib/modules.nix:821:9:
+
+          820|     in warnDeprecation opt //
+          821|       { value = addErrorContext "while evaluating the option `${showOption loc}':" value;
+             |         ^
+          822|         inherit (res.defsFinal') highestPrio;
+
+       (stack trace truncated; use '--show-trace' to show the full trace)
+
+       error: getting status of '/nix/store/yb9211q56sxs024iqc3h4fbbb5nfxfgp-source/home/modules/gui': No such file or directory
