@@ -4,6 +4,7 @@
   imports = [
     # TODO Import new tui modules here
     ./kitty.nix
+    ./hyprland.nix
   ];
 
   home.packages = with pkgs; [
