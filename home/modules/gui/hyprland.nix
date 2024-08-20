@@ -7,10 +7,11 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
+    systemd.enable = true;
 
     settings = {
 
-      monitor="MAIN,1920x1200@60,0x0,10";
+      monitor=",preferred,auto,0.8";
 
       exec-once = [
         "~/.config/hypr/hyprmonitors.conf"
