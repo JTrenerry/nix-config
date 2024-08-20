@@ -93,6 +93,11 @@ in
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+
+    wireplumber = {
+      enable = true;
+      configPackages = [];
+    };
     # If you want to use JACK applications, uncomment this
     #jack.enable = true;
 
