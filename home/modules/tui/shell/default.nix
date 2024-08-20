@@ -29,6 +29,9 @@
 
         # Create a colorful prompt with git branch info and symbols
         export PS1="\[\e[35m\]\u \w \$(parse_git_branch) $ \[\e[0m\]"
+
+        # Make sure to not use libgit2
+        unset LIBGIT2_NO_VENDOR
       '';
     };
   };

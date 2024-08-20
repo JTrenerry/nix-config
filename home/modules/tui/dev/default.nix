@@ -1,9 +1,9 @@
 {pkgs, ...}: {
   imports = [
-        ./python.nix
-            ./shell.nix
-        ./typst.nix
-        #            ./nix
+    ./python.nix
+    ./shell.nix
+    ./typst.nix
+        #./nix
   ];
 
   programs.gh = {
