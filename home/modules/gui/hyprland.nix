@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+  xdg.configFile."hypr/hyprmonitors.conf".text = ''
+    monitor=MAIN,1920x1200@60,0x0,1
+  '';
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
@@ -13,7 +16,8 @@
           disable_while_typing = "true";
         };
       };
-decoration = {
+
+      decoration = {
         rounding = "1";
 
         blur = {
