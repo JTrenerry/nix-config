@@ -2,7 +2,11 @@
 
 {
   xdg.configFile."hypr/hyprmonitors.conf".text = ''
-    monitor=MAIN,1920x1200@60,0x0,2
+    monitor=MAIN,1920x1200@60,0x0,1
+
+    xwayland {
+      force_zero_scaling = true
+    }
   '';
 
   wayland.windowManager.hyprland = {
