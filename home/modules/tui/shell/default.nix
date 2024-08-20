@@ -28,7 +28,7 @@
         }
 
         # Create a colorful prompt with git branch info and symbols
-        export PS1="\[\e[32m\]\u\[\e[33m\]\[\e[34m\]\h \[\e[35m\]\w$\[\e[33m\] \$(parse_git_branch)\[\e[31m]\[\e[0m\] "
+        export PS1="\[\e[35m\]\u\h \w$ \$(parse_git_branch)\[\e[0m\] "
       '';
     };
   };
