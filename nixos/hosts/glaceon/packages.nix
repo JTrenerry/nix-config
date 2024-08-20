@@ -9,7 +9,6 @@
     xdg-utils
     webcord
     xwaylandvideobridge
-    vmware-horizon-client
     # DO NOT ADD SHIT HERE
   ];
 }
