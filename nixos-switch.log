@@ -1,25 +1,31 @@
 warning: Git tree '/home/jackson/Documents/Code/nix' is dirty
 building the system configuration...
 warning: Git tree '/home/jackson/Documents/Code/nix' is dirty
-error:
-       … while calling the 'head' builtin
-
-         at /nix/store/sfycwi72zfjsspidinx56ajaiffpyh17-source/lib/attrsets.nix:1575:11:
-
-         1574|         || pred here (elemAt values 1) (head values) then
-         1575|           head values
-             |           ^
-         1576|         else
-
-       … while evaluating the attribute 'value'
-
-         at /nix/store/sfycwi72zfjsspidinx56ajaiffpyh17-source/lib/modules.nix:821:9:
-
-          820|     in warnDeprecation opt //
-          821|       { value = addErrorContext "while evaluating the option `${showOption loc}':" value;
-             |         ^
-          822|         inherit (res.defsFinal') highestPrio;
-
-       (stack trace truncated; use '--show-trace' to show the full trace)
-
-       error: getting status of '/nix/store/yb9211q56sxs024iqc3h4fbbb5nfxfgp-source/home/modules/gui': No such file or directory
+these 11 derivations will be built:
+  /nix/store/6hzdcm87vglnajy4z248dsbc2fd1pzy3-foot.ini.drv
+  /nix/store/hv20c9fx58pj4q7a8hhcihikphqdhfqj-bashrc.drv
+  /nix/store/6a87iy68s48vvx0psiffl53qdpq8qh1j-home-manager-path.drv
+  /nix/store/rz70smc653h0zp2gk5z8plvsbkkvkmdy-hm_fontconfigconf.d10hmfonts.conf.drv
+  /nix/store/1ywc8hc7i2pw3irm8nm65vn3i19a1vf6-home-manager-files.drv
+  /nix/store/l4qcvk631hbyn8grswsfp3mmwsy7a112-activation-script.drv
+  /nix/store/iwmy2bs44x9fdphmv73hmwgnk2z96pzk-home-manager-generation.drv
+  /nix/store/sm16yza5dl78y1yvi9r7f69ywdslbd2i-unit-home-manager-jackson.service.drv
+  /nix/store/zf9vfs28l40by558p4k9p6hw4v169nc9-system-units.drv
+  /nix/store/1z5ip8bp9fa14g9kmi6nzlapry34wbfl-etc.drv
+  /nix/store/xfyd2qabbam0ln0dpkbj98896vg79mgm-nixos-system-glaceon-24.11.20240814.c3aa7b8.drv
+building '/nix/store/6a87iy68s48vvx0psiffl53qdpq8qh1j-home-manager-path.drv'...
+building '/nix/store/hv20c9fx58pj4q7a8hhcihikphqdhfqj-bashrc.drv'...
+building '/nix/store/6hzdcm87vglnajy4z248dsbc2fd1pzy3-foot.ini.drv'...
+building '/nix/store/l4qcvk631hbyn8grswsfp3mmwsy7a112-activation-script.drv'...
+building '/nix/store/rz70smc653h0zp2gk5z8plvsbkkvkmdy-hm_fontconfigconf.d10hmfonts.conf.drv'...
+building '/nix/store/1ywc8hc7i2pw3irm8nm65vn3i19a1vf6-home-manager-files.drv'...
+building '/nix/store/iwmy2bs44x9fdphmv73hmwgnk2z96pzk-home-manager-generation.drv'...
+building '/nix/store/sm16yza5dl78y1yvi9r7f69ywdslbd2i-unit-home-manager-jackson.service.drv'...
+building '/nix/store/zf9vfs28l40by558p4k9p6hw4v169nc9-system-units.drv'...
+building '/nix/store/1z5ip8bp9fa14g9kmi6nzlapry34wbfl-etc.drv'...
+building '/nix/store/xfyd2qabbam0ln0dpkbj98896vg79mgm-nixos-system-glaceon-24.11.20240814.c3aa7b8.drv'...
+activating the configuration...
+setting up /etc...
+reloading user units for jackson...
+restarting sysinit-reactivation.target
+restarting the following units: home-manager-jackson.service
