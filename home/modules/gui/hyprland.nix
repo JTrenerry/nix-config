@@ -11,7 +11,7 @@
 
     settings = {
 
-      monitor=",preferred,auto,1";
+      monitor=",preferred,auto,1, bitdepth, 10";
 
       input = {
         touchpad = {
