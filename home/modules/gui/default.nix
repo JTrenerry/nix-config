@@ -9,22 +9,23 @@
   ];
 
   home.packages = with pkgs; [
-      # NOTE Add user packages that have a gui here
+    # NOTE Add user packages that have a gui here
 
-      # Important
-      firefox
+    # Important
+    firefox
 
-      # IM
-      vesktop
+    # IM
+    vesktop
 
-      # IDEs
-      jetbrains.idea-ultimate
-      # Office / Productivity
-      libreoffice-fresh
-      zoom-us
+    # IDEs
+    jetbrains.idea-ultimate
+    # Office / Productivity
+    libreoffice-fresh
+    zoom-us
 
-      # Misc
-      spotify
+    # Misc
+    spotify
+    blueberry
 
   ];
 }
