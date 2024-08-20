@@ -10,7 +10,7 @@
 
     settings = {
 
-      monitor="MAIN,1920x1200@60,0x0,0.1";
+      monitor="MAIN,1920x1200@60,0x0,0.5";
 
       exec-once = [
         "~/.config/hypr/hyprmonitors.conf"
