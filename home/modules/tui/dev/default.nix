@@ -2,8 +2,8 @@
   imports = [
         #./python.nix
         #    ./shell.nix
-        #    ./typst.nix
-        #./nix
+        #./typst.nix
+        #    ./nix
   ];
 
   programs.gh = {
@@ -16,5 +16,6 @@
 
   home.packages = with pkgs; [
     texlive.combined.scheme-full
+    libgit2
   ];
 }
