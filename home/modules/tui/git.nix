@@ -13,6 +13,7 @@
         push.default = "current";
         core.editor = "nvim";
         github.user = "JTrenerry";
+        github.userEmail = "105094182+JTrenerry@users.noreply.github.com";
         pull.rebase = false;
       };
     };

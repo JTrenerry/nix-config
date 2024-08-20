@@ -13,19 +13,20 @@
     borgbackup
     firefox
     kitty # Incase we need a terminal
+    foot
     # IDEs
     jetbrains.idea-ultimate
-    
+
     #Util
     vesktop
     libreoffice-qt6-still
     zoom-us
-  
+
     # Languages
     #Python
     python3
     python3Packages.pyelftools
-  
+
     # Misc
     kittysay
     neofetch
@@ -33,4 +34,3 @@
     libnotify # Rebuild script
   ];
 }
-
