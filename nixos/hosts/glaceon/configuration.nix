@@ -4,11 +4,15 @@
 
 { config, pkgs, lib, inputs, ... }:
 
+
+let
+  tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
+  session = "${pkgs.hyprland}/bin/Hyprland";
+in
 {
   imports =
     [
       ./packages.nix  # System wide packages
-
 
 
       # Include the results of the hardware scan.
@@ -55,9 +59,7 @@
       enable = true;
       settings = {
         default_session = {
-          command = "
-            dbus-run-session ${pkgs.cage}/bin/cage -s -- ${lib.getExe config.programs.regreet.package}
-          ";
+          command = "${tuigreet} --greeting 'Welcome to NixOS!' --asterisks --remember --remember-user-session --time --cmd ${session}";
           user = "greeter";
         };
       };

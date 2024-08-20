@@ -4,6 +4,15 @@
   xdg.configFile."hypr/hyprmonitors.conf".text = ''
   '';
 
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-hyprland
+      xdg-desktop-portal-wlr
+    ];
+    config.common.default = "*";
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
