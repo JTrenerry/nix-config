@@ -7,6 +7,7 @@
     vim # Just in case we need an editor, nixvim should be installed via flakes though
     wl-clipboard
     xdg-utils
+    webcord
     # DO NOT ADD SHIT HERE
   ];
 }
