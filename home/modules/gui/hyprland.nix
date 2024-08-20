@@ -11,7 +11,7 @@
 
     settings = {
 
-      monitor=",preferred,auto,0.8";
+      monitor=",preferred,auto,1";
 
       input = {
         touchpad = {
