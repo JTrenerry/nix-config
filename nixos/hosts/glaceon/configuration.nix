@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, lib, inputs, ... }:
 
 {
   imports =
@@ -47,6 +47,28 @@
     LC_PAPER = "en_AU.UTF-8";
     LC_TELEPHONE = "en_AU.UTF-8";
     LC_TIME = "en_AU.UTF-8";
+  };
+
+
+  services = {
+    greetd = {
+      enable = true;
+      settings = {
+        default_session = {
+          command = "
+            dbus-run-session ${pkgs.cage}/bin/cage -s -- ${lib.getExe config.programs.regreet.package}
+          ";
+          user = "greeter";
+        };
+      };
+    };
+  };
+
+  programs = {
+    regreet = {
+      enable = true;
+      # settings = ./regreet-config.toml;
+    };
   };
 
   # Enable the X11 windowing system.

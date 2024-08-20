@@ -4,6 +4,7 @@
   xdg.configFile."hypr/hyprmonitors.conf".text = ''
     monitor=MAIN,1920x1200@60,0x0,2
   '';
+
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
