@@ -13,10 +13,6 @@
 
       monitor=",preferred,auto,0.8";
 
-      exec-once = [
-        "~/.config/hypr/hyprmonitors.conf"
-      ];
-
       input = {
         touchpad = {
           natural_scroll = "yes";
