@@ -3,7 +3,7 @@
     kitty = {
       enable = true;
 
-      theme = "Base2Tone Lavendar Dark"
+      theme = "Space Gray Eighties";
     };
   };
 }

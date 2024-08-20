@@ -1,25 +1,7 @@
 warning: Git tree '/home/jackson/Documents/Code/nix' is dirty
 building the system configuration...
 warning: Git tree '/home/jackson/Documents/Code/nix' is dirty
-error:
-       … while calling the 'head' builtin
-
-         at /nix/store/sfycwi72zfjsspidinx56ajaiffpyh17-source/lib/attrsets.nix:1575:11:
-
-         1574|         || pred here (elemAt values 1) (head values) then
-         1575|           head values
-             |           ^
-         1576|         else
-
-       … while evaluating the attribute 'value'
-
-         at /nix/store/sfycwi72zfjsspidinx56ajaiffpyh17-source/lib/modules.nix:821:9:
-
-          820|     in warnDeprecation opt //
-          821|       { value = addErrorContext "while evaluating the option `${showOption loc}':" value;
-             |         ^
-          822|         inherit (res.defsFinal') highestPrio;
-
-       (stack trace truncated; use '--show-trace' to show the full trace)
-
-       error: getting status of '/nix/store/4hwjic5j3ayqr4l0b4pc6c1sfm0rpy0p-source/home/modules/gui/kitty.nix': No such file or directory
+activating the configuration...
+setting up /etc...
+reloading user units for jackson...
+restarting sysinit-reactivation.target
