@@ -23,6 +23,7 @@
         runtimeInputs = with pkgs; [
           nixpkgs-review
           tmux
+          libgit2
         ];
       })
     ];
