@@ -5,6 +5,7 @@
     # TODO Import new tui modules here
     ./git.nix
     ./tmux.nix
+    ./neofetch.nix
 
     ./shell
     ./neovim
