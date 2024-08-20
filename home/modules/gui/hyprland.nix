@@ -2,7 +2,7 @@
 
 {
   xdg.configFile."hypr/hyprmonitors.conf".text = ''
-    monitor=MAIN,1920x1080@60,0x0,0.5
+    monitor=MAIN,1920x1080@60,0x0,0.1
 
     xwayland {
       force_zero_scaling = true
@@ -14,6 +14,10 @@
     xwayland.enable = true;
 
     settings = {
+
+      exec-once = [
+        "~/.config/hypr/hyprmonitors.conf"
+      ];
 
       input = {
         touchpad = {
