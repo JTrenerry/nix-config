@@ -8,6 +8,7 @@
 
     ./shell
     ./neovim
+    ./dev
   ];
 
   programs = {
@@ -24,13 +25,23 @@
     homeDirectory = lib.mkDefault "/home/jackson";
 
     packages = with pkgs; [
-      #NOTE: This is user packages
+      # NOTE This is user packages
 
 
-
+      # Fonts
       (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
 
-      #TODO: Install new user packages here
+      # Deployment
+      docker-compose
+      docker
+
+      # SSH
+      cloudflared
+
+      # Misc
+      kittysay
+      neofetch
+      borgbackup
     ];
 
     sessionVariables = {
