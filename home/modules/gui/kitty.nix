@@ -3,7 +3,7 @@
     kitty = {
       enable = true;
 
-      theme = "Rosé Pine";
+      theme = "Rosé Pine Moon";
     };
   };
 }
