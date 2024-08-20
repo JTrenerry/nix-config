@@ -4,11 +4,12 @@
   wayland.windowManager.hyprland = {
     enable = true;
     xwayland.enable = true;
+    settings = {
+      "$mainMod" = "SUPER";
 
-    "$mainMod" = "SUPER";
-
-    bind = [
-      "$mainMod, Q, exec, kitty"
-    ];
+      bind = [
+        "$mainMod, Q, exec, kitty"
+      ];
+    };
   };
 }
