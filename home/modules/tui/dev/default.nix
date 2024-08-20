@@ -3,7 +3,7 @@
     ./python.nix
     ./shell.nix
     ./typst.nix
-        #./nix
+    ./nix.nix
   ];
 
   programs.gh = {
@@ -16,6 +16,5 @@
 
   home.packages = with pkgs; [
     texlive.combined.scheme-full
-    libgit2
   ];
 }
