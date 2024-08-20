@@ -3,7 +3,7 @@
     kitty = {
       enable = true;
 
-      theme = "Space Gray Eighties";
+      theme = "Rosé Pine";
     };
   };
 }
