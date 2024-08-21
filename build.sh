@@ -15,13 +15,6 @@ set -e
 # cd to your config dir
 pushd ~/Documents/Code/nix
 
-# Early return if no changes were detected (thanks @singiamtel!)
-if git diff --quiet '*.nix'; then
-    echo "No changes detected, exiting."
-    popd
-    exit 0
-fi
-
 # Shows your changes
 git diff -U0 '*.nix'
 
@@ -40,6 +33,3 @@ git push
 
 # Back to where you were
 popd
-
-# Notify all OK!
-notify-send -e "NixOS Rebuilt OK!" --icon=software-update-available
