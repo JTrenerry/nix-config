@@ -7,7 +7,7 @@
 
       package = pkgs.rofi-wayland;
 
-      theme = "rounded-pink-dark";
+      theme = "Arc-Dark";
     };
   };
 }
