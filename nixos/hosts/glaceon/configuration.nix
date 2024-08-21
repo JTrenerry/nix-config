@@ -15,7 +15,6 @@ in
       ./packages.nix  # System wide packages
 
 
-
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
