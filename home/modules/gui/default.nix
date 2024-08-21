@@ -30,19 +30,4 @@
     blueman
     pavucontrol
   ];
-
-  gtk = {
-    enable = true;
-
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
-    };
-
-    gtk4.extraConfig = {
-      settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
-    };
-  };
 }
