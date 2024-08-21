@@ -14,6 +14,7 @@
 
     # Important
     firefox
+    flameshot
 
     # IM
     vesktop
