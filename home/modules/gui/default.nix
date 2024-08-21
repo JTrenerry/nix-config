@@ -26,6 +26,6 @@
     # Misc
     spotify
     blueberry
-
+    pavucontrol
   ];
 }
