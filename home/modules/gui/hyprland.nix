@@ -175,7 +175,7 @@
         "$mainMod SHIFT, down, movewindow, d"
 
         # Brightness
-        "$mainMod, PRINT, exec, hyprshot -m region"
+        ", PRINT, exec, hyprshot -m region"
 
         # Audio
 
