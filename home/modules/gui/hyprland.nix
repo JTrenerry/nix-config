@@ -174,7 +174,7 @@
         "$mainMod SHIFT, up, movewindow, u"
         "$mainMod SHIFT, down, movewindow, d"
 
-        "$mainMod PRINT, exec, hyprshot -m region"
+        "$mainMod, PRINT, exec, hyprshot -m region"
       ];
 
       bindm = [

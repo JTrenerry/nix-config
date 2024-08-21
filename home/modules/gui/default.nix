@@ -15,6 +15,7 @@
     # Important
     firefox
     hyprshot
+    brightnessctl
 
     # IM
     vesktop
