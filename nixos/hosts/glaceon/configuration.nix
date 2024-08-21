@@ -53,6 +53,8 @@ in
     LC_TIME = "en_AU.UTF-8";
   };
 
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   services = {
     greetd = {
