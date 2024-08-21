@@ -14,7 +14,7 @@
 
     # Important
     firefox
-    flameshot
+    hyprshot
 
     # IM
     vesktop
