@@ -43,6 +43,10 @@
       kittysay
       neofetch
       borgbackup
+
+      # Connections
+      bluetuith
+      bluez
     ];
 
     sessionVariables = {
