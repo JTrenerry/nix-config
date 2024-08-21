@@ -27,7 +27,7 @@
 
     packages = with pkgs; [
       # NOTE This is user packages
-
+      acpi
 
       # Fonts
       (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
