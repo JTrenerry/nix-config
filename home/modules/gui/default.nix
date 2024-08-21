@@ -10,6 +10,7 @@
 
   home.packages = with pkgs; [
     # NOTE Add user packages that have a gui here
+    dunst # Setup script
 
     # Important
     firefox
@@ -19,6 +20,7 @@
 
     # IDEs
     jetbrains.idea-ultimate
+
     # Office / Productivity
     libreoffice-fresh
     zoom-us
@@ -28,4 +30,19 @@
     blueman
     pavucontrol
   ];
+
+  gtk = {
+    enable = true;
+
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs.papirus-icon-theme;
+    };
+
+    gtk4.extraConfig = {
+      settings = ''
+        gtk-application-prefer-dark-theme=1
+      '';
+    };
+  };
 }

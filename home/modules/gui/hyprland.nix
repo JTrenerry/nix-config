@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   xdg.configFile."hypr/hyprmonitors.conf".text = ''

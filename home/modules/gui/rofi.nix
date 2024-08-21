@@ -6,6 +6,8 @@
       enable = true;
 
       package = pkgs.rofi-wayland;
+
+      theme = "rounded-pink-dark";
     };
   };
 }
