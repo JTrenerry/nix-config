@@ -27,24 +27,12 @@
           full_symbol = "🔋";
           charging_symbol = "⚡️";
           discharging_symbol = "🔌";
-          disabled = false;
+          disabled = true;
         };
 
         git_branch = {
-          symbol = "🌱 "; # You can customize the symbol here
-          disabled = false;
+          disabled = true;
         };
-
-        # Add other configurations as needed
-        prompt_order = [
-          "username"
-          "hostname"
-          "directory"
-          "git_branch"
-          "battery"
-          "jobs"
-          "time"
-        ];
 
         # Example time format
         time = {
