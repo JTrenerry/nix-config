@@ -30,7 +30,7 @@
       info cols
 
       image_backend="ascii"
-      image_source="./neo.jpg"
+      image_source="/home/jackson/Documents/Code/nix/home/modules/tui/neo.jpg"
     }
   '';
 }
