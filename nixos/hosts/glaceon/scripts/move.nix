@@ -1,6 +1,8 @@
 { pkgs }:
 
 pkgs.writeShellScriptBin "move" ''
-    class = ''${1^^}
-    cd "''${HOME}/Documents/University/''${class:0:4}/''${class:4:4}" || exit
+    CLASS=''${1^^}
+    COURSE=''${CLASS:0:4}
+    NUMBER=''${CLASS:4:4}
+    cd "''${HOME}/Documents/University/''${COURSE}/''${NUMBER}" || exit
 ''
