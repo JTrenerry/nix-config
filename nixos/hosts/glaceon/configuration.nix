@@ -157,6 +157,7 @@ in
   environment = {
     variables = {
       XDG_CURRENT_DESKTOP = "Hyprland";
+      USE_WAYLAND_GRIM = "1";
       XDG_SESSION_TYPE = "wayland";
       XDG_SESSION_DESKTOP = "Hyprland";
     };
