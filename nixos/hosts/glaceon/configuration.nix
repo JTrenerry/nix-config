@@ -13,7 +13,7 @@ in
   imports =
     [
       ./packages.nix  # System wide packages
-
+      ./scripts
 
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
