@@ -41,6 +41,7 @@
       # Misc
       kittysay
       neofetch
+      imagemagick
       borgbackup
 
       # Connections
