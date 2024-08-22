@@ -28,6 +28,9 @@
       info "Song" song
 
       info cols
+
+      image_backend="ascii"
+      image_source="./neo.jpg"
     }
   '';
 }
