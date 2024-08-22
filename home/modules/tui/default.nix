@@ -32,9 +32,8 @@
       # Fonts
       (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
 
-      # Deployment
+      # Containers
       docker-compose
-      docker
 
       # SSH
       cloudflared

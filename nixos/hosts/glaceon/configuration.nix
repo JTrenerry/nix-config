@@ -130,12 +130,15 @@ in
   users.users.jackson = {
     isNormalUser = true;
     description = "jackson";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
     #  thunderbird
     ];
   };
 
+  virtualisation.docker = {
+    enable = true;
+  };
   # Install firefox.
   programs.firefox.enable = true;
 

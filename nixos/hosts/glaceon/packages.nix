@@ -6,5 +6,6 @@
   environment.systemPackages = with pkgs; [
     vim # Just in case we need an editor, nixvim should be installed via flakes though
     # DO NOT ADD SHIT HERE
+    docker
   ];
 }
