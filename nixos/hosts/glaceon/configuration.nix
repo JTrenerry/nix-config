@@ -34,6 +34,19 @@ in
 
   nix.gc = { automatic = true; dates = "weekly"; options = "--delete-older-than 14d"; };
 
+  # Looks at my github repo for my nix-templates
+  nix.registry.devtemplates = {
+    to = {
+      owner = "JTrenerry";
+      repo = "nix-templates";
+      type = "github";
+    };
+    from = {
+      id = "devtemplates";
+      type = "indirect";
+    };
+  };
+
   # Enable networking
   networking.networkmanager.enable = true;
 
