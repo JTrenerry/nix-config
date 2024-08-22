@@ -31,5 +31,6 @@
     spotify
     blueman
     pavucontrol
+    postman
   ];
 }
