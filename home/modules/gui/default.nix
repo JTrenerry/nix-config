@@ -14,7 +14,7 @@
 
     # Important
     firefox
-    hyprshot
+    flameshot
     brightnessctl
 
     # IM

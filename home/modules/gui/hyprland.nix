@@ -175,7 +175,7 @@
         "$mainMod SHIFT, down, movewindow, d"
 
         # Brightness
-        ", PRINT, exec, hyprshot -m region"
+        ", PRINT, exec, flameshot gui"
 
         # Audio
         ",XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.4 @DEFAULT_AUDIO_SINK@ 5%+"
