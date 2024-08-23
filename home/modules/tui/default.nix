@@ -47,6 +47,8 @@
       # Connections
       bluetuith
       bluez
+
+      zulu21
     ];
 
     sessionVariables = {
