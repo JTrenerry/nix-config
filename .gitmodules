@@ -1,0 +1,3 @@
+[submodule "nixos/hosts/glaceon/gdx"]
+	path = nixos/hosts/glaceon/gdx
+	url = git@github.com:plapadoo/gdx-nixos-overlay.git
