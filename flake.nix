@@ -21,6 +21,11 @@
       modules = [
         ./nixos/hosts/glaceon/configuration.nix
         inputs.home-manager.nixosModules.default
+        ({ pkgs, ... } : {
+          nixpkgs.overlays = [
+            (import ./nixos/hosts/glaceon/gdx)
+          ];
+        })
       ];
     };
   };
