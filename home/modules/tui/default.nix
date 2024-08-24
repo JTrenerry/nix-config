@@ -47,6 +47,7 @@
       # Connections
       bluetuith
       bluez
+      nodejs_20
     ];
 
     sessionVariables = {
