@@ -32,5 +32,6 @@
     blueman
     pavucontrol
     postman
+    hyprlock
   ];
 }
