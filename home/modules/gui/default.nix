@@ -14,7 +14,6 @@
 
     # Important
     firefox
-    flameshot
     brightnessctl
 
     # IM
@@ -33,8 +32,5 @@
     pavucontrol
     postman
     grimblast #screenshot
-    xfce.thunar
-    xfce.thunar-volman
-    gvfs
   ];
 }
