@@ -35,5 +35,6 @@
     grimblast #screenshot
     xfce.thunar
     xfce.thunar-volman
+    gvfs
   ];
 }
