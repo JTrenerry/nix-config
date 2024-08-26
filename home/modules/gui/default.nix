@@ -32,6 +32,6 @@
     blueman
     pavucontrol
     postman
-    hyprshot
+    grim
   ];
 }
