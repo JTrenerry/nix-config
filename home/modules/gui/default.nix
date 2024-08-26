@@ -21,6 +21,7 @@
 
     # IDEs
     jetbrains.idea-ultimate
+    xorg.xrandr
 
     # Office / Productivity
     libreoffice-fresh
