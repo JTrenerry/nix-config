@@ -32,8 +32,6 @@
     blueman
     pavucontrol
     postman
-    grim #screenshot
-    slurp #screenshot
-    wl-clipboard-rs #screenshot
+    grimblast #screenshot
   ];
 }
