@@ -33,5 +33,6 @@
     pavucontrol
     postman
     grimblast #screenshot
+    xfce.thunar
   ];
 }
