@@ -34,5 +34,6 @@
     postman
     grim #screenshot
     slurp #screenshot
+    wl-clipboard-rs #screenshot
   ];
 }
