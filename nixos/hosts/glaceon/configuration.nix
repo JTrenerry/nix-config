@@ -7,7 +7,7 @@
 
 let
   tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
-  session = "${pkgs.hyprland}/bin/Hyprland";
+  session = "${inputs.hyprland.packages.x86_64-linux.default}/bin/Hyprland";
 in
 {
   imports =
@@ -82,17 +82,6 @@ in
           user = "greeter";
         };
       };
-    };
-  };
-
-  programs = {
-    regreet = {
-      enable = true;
-      # settings = ./regreet-config.toml;
-    };
-    hyprland = {
-      enable = true;
-      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
     };
   };
 
