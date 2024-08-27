@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, system, ... }:
 
 {
   xdg.configFile."hypr/hyprmonitors.conf".text = ''
@@ -16,6 +16,7 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
+    package = inputs.hyprland.packages.x86_64-linux.default;
     xwayland.enable = true;
     systemd.enable = true;
 
