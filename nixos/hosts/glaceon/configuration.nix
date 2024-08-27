@@ -15,6 +15,8 @@ in
       ./packages.nix  # System wide packages
       ./scripts
 
+      inputs.hyprland.nixosModules.default
+
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
     ];
