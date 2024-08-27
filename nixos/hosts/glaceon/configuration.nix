@@ -90,6 +90,10 @@ in
       enable = true;
       # settings = ./regreet-config.toml;
     };
+    hyprland = {
+      enable = true;
+      package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    };
   };
 
   # Configure keymap in X11
