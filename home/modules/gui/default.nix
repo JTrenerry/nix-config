@@ -4,7 +4,7 @@
   imports = [
     # TODO Import new tui modules here
     ./kitty.nix
-    ./hyprland.nix
+    ./hyprland
     ./rofi.nix
   ];
 

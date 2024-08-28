@@ -1,5 +1,16 @@
 { pkgs, inputs, system, ... }:
 
+
+let
+  startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
+    ${pkgs.waybar}/bin/waybar &
+    ${pkgs.swww}/bin/swww init &
+
+    sleep 1
+
+    ${pkgs.swww}/bin/swww img ${./wallpaper.png} &
+  '';
+in
 {
   imports = [
     inputs.hyprland.homeManagerModules.default
@@ -24,6 +35,8 @@
     systemd.enable = true;
 
     settings = {
+
+      exec-once = ''${startupScript}/bin/start'';
 
       monitor=",preferred,auto,1, bitdepth, 10";
 
