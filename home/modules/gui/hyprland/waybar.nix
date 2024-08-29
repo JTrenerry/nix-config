@@ -34,7 +34,7 @@
         };
 
         "pulseaudio" = {
-          format = "{icon}  {volume}% {format_source}";
+          format = "{icon} {volume}% {format_source}";
           format-bluetooth = "{volume}% {icon}  {format_source}";
           format-bluetooth-muted = " {icon}  {format_source}";
           format-muted = " {format_source}";
@@ -42,6 +42,7 @@
           format-source-muted = " ";
           format-icons = {
             headphone = " ";
+            /* TODO: get a better emojis or nerdfont? */
             hands-free = " ";
             headset = " ";
             phone = " ";
