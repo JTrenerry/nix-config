@@ -32,6 +32,30 @@
 	      all-outputs = true;
           sort-by-number = true;
         };
+
+        "pulseaudio" = {
+          format = "{icon} {volume}% {format_source}";
+          format-bluetooth = "{volume}% {icon} {format_source}";
+          format-bluetooth-muted = " {icon} {format_source}";
+          format-muted = " {format_source}";
+          format-source = " {volume}%";
+          format-source-muted = "";
+          format-icons = {
+            headphone = "";
+            hands-free = "";
+            headset = "";
+            phone = "";
+            portable = "";
+            car = "";
+            default = [
+              ""
+              ""
+              ""
+            ];
+          };
+          on-click = "sleep 0.1 && pavucontrol";
+        };
+
       };
     };
 
@@ -96,7 +120,7 @@
         border-radius: 0px 0px 0px 40px;
       }
 
-      #battery, #tray {
+      #battery, #tray, #pulseaudio {
         font-weight: bold;
         background: @surface;
         color: @iris;
