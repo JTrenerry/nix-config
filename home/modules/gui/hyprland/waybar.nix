@@ -163,6 +163,7 @@
         font-weight: bold;
         background: @highlightLow;
         color: @iris;
+        border-color: @foam;
       }
 
       #clock {
