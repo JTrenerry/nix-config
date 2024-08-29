@@ -15,14 +15,14 @@
         ];
 
         modules-center = [
-
+          "tray" # NOTE this shit trash?
         ];
 
         modules-right = [
           "bluetooth"
           "pulseaudio"
+          "network"
           "battery"
-          "tray"
           "clock"
         ];
 
@@ -31,6 +31,24 @@
 	      on-click = "activate";
 	      all-outputs = true;
           sort-by-number = true;
+        };
+
+        "tray" = {
+          spacing =12;
+        };
+
+        "network" = {
+          format-icons = [
+            "󰤯 "
+            "󰤟 "
+            "󰤢 "
+            "󰤥 "
+            "󰤨 "
+          ];
+          format-ethernet = " {bandwidthDownOctets}";
+          format-wifi = "{icon} {signalStrength}%";
+          format-disconnected = "󰤮";
+          tooltip = false;
         };
 
         "bluetooth" = {
