@@ -33,6 +33,10 @@
           sort-by-number = true;
         };
 
+        "bluetooth" = {
+          on-click = "sleep 0.1 && blueman-manager";
+        };
+
         "pulseaudio" = {
           format = "{icon} {volume}% {format_source}";
           format-bluetooth = "{volume}% {icon}  {format_source}";
@@ -121,7 +125,8 @@
         border-radius: 0px 0px 0px 40px;
       }
 
-      #battery, #tray, #pulseaudio {
+      #battery, #tray, #pulseaudio,
+      #bluetooth {
         font-weight: bold;
         background: @surface;
         color: @iris;
