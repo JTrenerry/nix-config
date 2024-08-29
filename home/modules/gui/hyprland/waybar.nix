@@ -37,6 +37,31 @@
           spacing =12;
         };
 
+        "battery" = {
+          states = {
+            warning = 30;
+            critical = 15;
+          };
+          format = "{icon} {capacity}%";
+          format-charging = "󰂄 {capacity}%";
+          format-plugged = "󱘖 {capacity}%";
+          format-icons = [
+            "󰁺"
+            "󰁻"
+            "󰁼"
+            "󰁽"
+            "󰁾"
+            "󰁿"
+            "󰂀"
+            "󰂁"
+            "󰂂"
+            "󰁹"
+          ];
+          on-click = "";
+          tooltip = false;
+        };
+
+
         "network" = {
           format-icons = [
             "󰤯 "
@@ -144,7 +169,7 @@
       }
 
       #battery, #tray, #pulseaudio,
-      #bluetooth {
+      #bluetooth, #network {
         font-weight: bold;
         background: @surface;
         color: @iris;
