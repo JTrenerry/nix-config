@@ -37,6 +37,12 @@
           spacing =12;
         };
 
+        "clock" = {
+          format = '' {:L%I:%M %p}'';
+          tooltip = true;
+          tooltip-format = "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>";
+        };
+
         "battery" = {
           states = {
             warning = 30;
@@ -61,7 +67,6 @@
           tooltip = false;
         };
 
-
         "network" = {
           format-icons = [
             "󰤯 "
@@ -70,9 +75,9 @@
             "󰤥 "
             "󰤨 "
           ];
-          format-ethernet = " {bandwidthDownOctets}";
+          format-ethernet = " {bandwidthDownOctets}"; /* TODO: this shit wack */
           format-wifi = "{icon} {signalStrength}%";
-          format-disconnected = "󰤮";
+          format-disconnected = "󰤮 ";
           tooltip = false;
         };
 
