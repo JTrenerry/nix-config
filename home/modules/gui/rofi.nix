@@ -7,7 +7,7 @@
 
       package = pkgs.rofi-wayland;
 
-      theme = "Arc-Dark";
+      theme = "/home/jackson/Documents/Code/nix/home/modules/gui/rofi-theme/squared-rose-pine-rasi";
     };
   };
 }

@@ -40,7 +40,7 @@
 
       # Misc
       kittysay
-      neofetch
+      fastfetch
       imagemagick
       borgbackup
 

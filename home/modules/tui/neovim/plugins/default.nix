@@ -19,9 +19,11 @@
 
   programs.nixvim = {
 
-    colorschemes.nightfox = {
+    colorschemes.rose-pine = {
       enable = true;
-      flavor = "duskfox";
+      settings = {
+        variant = "moon";
+      };
     };
 
     plugins = {
