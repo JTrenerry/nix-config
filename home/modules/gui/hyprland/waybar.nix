@@ -161,8 +161,8 @@
 
       #workspaces button:hover {
         font-weight: bold;
-        background: @iris;
-        color: @surface;
+        background: @highlightMed;
+        color: @iris;
       }
 
       #clock {
