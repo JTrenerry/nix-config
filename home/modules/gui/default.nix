@@ -34,5 +34,15 @@
     networkmanagerapplet # network
     postman
     grimblast #screenshot
+
+
+    # 3200
+    libglvnd
+    #libX11
+    xorg.libX11
+    xorg.libXext
+    xorg.libXrender
+    xorg.libXrandr
+    xorg.libXi
   ];
 }
