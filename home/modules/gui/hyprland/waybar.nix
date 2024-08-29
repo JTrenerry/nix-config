@@ -161,7 +161,7 @@
 
       #workspaces button:hover {
         font-weight: bold;
-        background: @highlightMed;
+        background: @highlightHigh;
         color: @iris;
       }
 
