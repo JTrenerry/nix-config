@@ -23,21 +23,7 @@
     starship = {
       enable = true;
       settings = {
-        battery = {
-          full_symbol = "🔋";
-          charging_symbol = "⚡️";
-          discharging_symbol = "🔌";
-          disabled = true;
-        };
 
-        git_branch = {
-          disabled = true;
-        };
-
-        # Example time format
-        time = {
-          format = "🕒 [%H:%M:%S]";
-        };
       };
     };
   };
