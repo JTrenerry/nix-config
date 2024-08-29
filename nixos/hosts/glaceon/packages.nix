@@ -7,6 +7,7 @@
     vim # Just in case we need an editor, nixvim should be installed via flakes though
     # DO NOT ADD SHIT HERE
     mesa
+    mesa-demos
     libglvnd
     vulkan-tools  # For Vulkan support, if needed
   ];
