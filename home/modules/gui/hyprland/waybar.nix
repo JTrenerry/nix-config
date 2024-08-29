@@ -38,7 +38,7 @@
         };
 
         "clock" = {
-          format = ''  {:L%I:%M %p}'';
+          format = ''{:L%I:%M %p}'';
           tooltip = true;
           tooltip-format = "<big>{:%A, %d.%B %Y }</big>\n<tt><small>{calendar}</small></tt>";
         };
@@ -81,10 +81,6 @@
           tooltip = false;
         };
 
-        "bluetooth" = {
-          on-click = "sleep 0.1 && blueman-manager";
-        };
-
         "pulseaudio" = {
           format = "{icon} {volume}% {format_source}";
           format-bluetooth = "{volume}% {icon}  {format_source}";
@@ -107,6 +103,11 @@
             ];
           };
           on-click = "sleep 0.1 && pavucontrol";
+        };
+
+        # TODO: make it look pretty
+        "bluetooth" = {
+          on-click = "sleep 0.1 && blueman-manager";
         };
 
       };
