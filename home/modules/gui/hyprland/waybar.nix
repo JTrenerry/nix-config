@@ -11,11 +11,10 @@
         height = 30;
 
         modules-left = [
-          "hyprland/workspaces"
         ];
 
         modules-center = [
-          "tray" # NOTE this shit trash?
+          "hyprland/workspaces"
         ];
 
         modules-right = [
