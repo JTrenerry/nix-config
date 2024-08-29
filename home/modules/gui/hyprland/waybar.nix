@@ -19,7 +19,7 @@
         ];
 
         modules-right = [
-          "blueman"
+          "bluetooth"
           "pulseaudio"
           "battery"
           "tray"
