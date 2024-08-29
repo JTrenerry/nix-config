@@ -29,8 +29,9 @@
 
     # Misc
     spotify
-    blueman
-    pavucontrol
+    blueman # bluetooth
+    pavucontrol # audio
+    networkmanagerapplet # network
     postman
     grimblast #screenshot
   ];

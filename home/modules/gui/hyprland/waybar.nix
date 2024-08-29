@@ -78,6 +78,7 @@
           format-wifi = "{icon} {signalStrength}%";
           format-disconnected = "󰤮 ";
           tooltip = false;
+          on-click = "sleep 0.1 && nm-connection-editor";
         };
 
         "pulseaudio" = {
