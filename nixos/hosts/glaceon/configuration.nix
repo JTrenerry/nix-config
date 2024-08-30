@@ -76,15 +76,13 @@ in
   hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
   services = {
-    blueman.enable = true;
     greetd = {
       enable = true;
-      settings = rec {
-          initial_session = {
-          command = "${inputs.hyprland.packages.x86_64-linux.default}/bin/Hyprland";
-          user = "jackson";
+      settings = {
+        default_session = {
+          command = "${tuigreet} --greeting 'Welcome to NixOS!' --asterisks --remember --remember-user-session --time --cmd ${session}";
+          user = "greeter";
         };
-        default-session = initial_session;
       };
     };
   };
