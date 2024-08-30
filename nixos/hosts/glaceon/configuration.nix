@@ -6,7 +6,8 @@
 
 
 let
-  Hyprland = "${inputs.hyprland.packages.x86_64-linux.default}/bin/Hyprland";
+  tuigreet = "${pkgs.greetd.tuigreet}/bin/tuigreet";
+  session = "${inputs.hyprland.packages.x86_64-linux.default}/bin/Hyprland";
 in
 {
   imports =
@@ -79,7 +80,7 @@ in
       enable = true;
       settings = {
         default_session = {
-          command = "${Hyprland}";
+          command = "${tuigreet} --greeting 'Welcome to NixOS!' --asterisks --remember --remember-user-session --time --cmd ${session}";
           user = "greeter";
         };
       };
