@@ -3,7 +3,7 @@
 
 let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    ${pkgs.hypridle}/bin/hypridle
+    ${pkgs.hypridle}/bin/hypridle &
     ${pkgs.waybar}/bin/waybar &
     ${pkgs.swww}/bin/swww init &
 
