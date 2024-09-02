@@ -23,7 +23,7 @@
 
     # 3200 overlay
     lwjgl-overlay = {
-      url = "github:plapadoo/gdx-nixos-overlay"; # Replace with the actual username/repo
+      url = "github:JTrenerry/gdx-nixos-overlay"; # Replace with the actual username/repo
       flake = false;
     };
   };

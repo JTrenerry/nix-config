@@ -395,15 +395,15 @@
     "lwjgl-overlay": {
       "flake": false,
       "locked": {
-        "lastModified": 1509784953,
-        "narHash": "sha256-ZLasuACO95oM8W5QZZCdIdnq0/x9v+ARu6wfZL16g5w=",
-        "owner": "plapadoo",
+        "lastModified": 1725240479,
+        "narHash": "sha256-d3r1YXUqUqWp355fFgsYD0x6Ln3CAbz7AX4LhcJMMbY=",
+        "owner": "JTrenerry",
         "repo": "gdx-nixos-overlay",
-        "rev": "9f263d980ad74b95a7b68ee25450d939a102fb9e",
+        "rev": "5ce531fa2f7e9bf8465d5d1f581d785003df0273",
         "type": "github"
       },
       "original": {
-        "owner": "plapadoo",
+        "owner": "JTrenerry",
         "repo": "gdx-nixos-overlay",
         "type": "github"
       }
