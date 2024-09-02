@@ -8,5 +8,7 @@
     # DO NOT ADD SHIT HERE
     lwjgl
     gdx
+    mesa
+    mesa-demos
   ];
 }
