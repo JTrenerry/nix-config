@@ -392,6 +392,22 @@
         "type": "github"
       }
     },
+    "lwjgl-overlay": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1509784953,
+        "narHash": "sha256-ZLasuACO95oM8W5QZZCdIdnq0/x9v+ARu6wfZL16g5w=",
+        "owner": "plapadoo",
+        "repo": "gdx-nixos-overlay",
+        "rev": "9f263d980ad74b95a7b68ee25450d939a102fb9e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "plapadoo",
+        "repo": "gdx-nixos-overlay",
+        "type": "github"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -500,6 +516,7 @@
         "home-manager": "home-manager",
         "hyprland": "hyprland",
         "hyprland-plugins": "hyprland-plugins",
+        "lwjgl-overlay": "lwjgl-overlay",
         "nixpkgs": "nixpkgs_2",
         "nixvim": "nixvim"
       }
