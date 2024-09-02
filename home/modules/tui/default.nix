@@ -43,6 +43,7 @@
       fastfetch
       imagemagick
       borgbackup
+      tree
 
       # Connections
       bluetuith
