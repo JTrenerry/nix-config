@@ -31,7 +31,7 @@
 
     # Misc
     spotify
-    spiceify-cli
+    spicetify-cli
     blueman # bluetooth
     pavucontrol # audio
     networkmanagerapplet # network
