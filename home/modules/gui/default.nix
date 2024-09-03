@@ -35,6 +35,7 @@
     postman
     grimblast #screenshot
     hyprlock # lockscreen
+    pinta
 
   ];
 }
