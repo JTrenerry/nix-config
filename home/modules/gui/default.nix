@@ -18,7 +18,7 @@
     brightnessctl
 
     # IM
-    vesktop
+    vesktop # to do be moved for conf stuff
 
     # IDEs
     jetbrains.idea-ultimate
