@@ -8,7 +8,7 @@
     ./rofi.nix
     ./cava.nix
     ./dunst.nix
-    #    ./stylix.nix
+    ./stylix.nix
   ];
 
   home.packages = with pkgs; [

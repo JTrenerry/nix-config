@@ -13,7 +13,7 @@
   programs.home-manager.enable = true;
 
   imports =
-    [ inputs.nix-index-database.hmModules.nix-index ]
+    [ ]
     #  ++ lib.optional (builtins.isPath (./. + "common/users/${username}")) ./common/users/${username}
     #  ++ lib.optional (builtins.isPath (
     #    ./. + "common/users/${username}/hosts/${hostname}"
