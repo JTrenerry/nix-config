@@ -78,11 +78,15 @@ in
   services = {
     greetd = {
       enable = true;
-      settings = {
-        default_session = {
-          command = "${tuigreet} --greeting 'Welcome to NixOS!' --asterisks --remember --remember-user-session --time --cmd ${session}";
-          user = "greeter";
+      settings = rec {
+        initial_session = {
+          # command = "
+          #   dbus-run-session ${pkgs.cage}/bin/cage -s -- ${lib.getExe config.programs.regreet.package}
+          # ";
+          command = "${inputs.hyprland.packages.x86_64-linux.default}/bin/Hyprland";
+          user = "jackson";
         };
+        default_session = initial_session;
       };
     };
   };

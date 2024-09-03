@@ -3,14 +3,12 @@
 
 let
   startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    ${pkgs.hypridle}/bin/hypridle &
-    ${pkgs.waybar}/bin/waybar &
-    ${pkgs.swww}/bin/swww init &
+    ${pkgs.hypridle}/bin/hypridle
+    ${pkgs.swww}/bin/swww init
 
-    sleep 1
-
-    ${pkgs.swww}/bin/swww img ${./wallpaper.jpg} &
+    ${pkgs.swww}/bin/swww img ${./wallpaper.jpg}
     ${pkgs.swww}/bin/hyprlock
+    ${pkgs.waybar}/bin/waybar
   '';
 in
 {
