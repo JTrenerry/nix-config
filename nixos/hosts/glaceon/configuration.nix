@@ -16,7 +16,6 @@ in
       ./scripts
 
       inputs.hyprland.nixosModules.default
-      inputs.stylix.nixosModules.stylix
 
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
