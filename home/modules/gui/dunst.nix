@@ -17,7 +17,7 @@
           gap_size = 3;
           font = "Monospace 9";
 
-          icon_theme = "rose-pine-icons";
+          icon_theme = "rose-pine-icon-theme";
           enable_recursive_icon_lookup = true;
           corner_radius = 2;
 
