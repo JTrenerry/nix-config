@@ -10,6 +10,7 @@
   stylix = {
     enable = true;
     autoEnable = true;
+    targets.hyprland.enable = false;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
     image = ./hyprland/wallpaper.jpg;
     # cursor.name = "Breeze-gtk";
