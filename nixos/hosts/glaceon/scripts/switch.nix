@@ -1,42 +1,7 @@
-# { pkgs }:
-# pkgs.writeScriptBin "switch" ''
-#   #!${pkgs.stdenv.shell}
-
-#   if [ -e /etc/nixos/ ]; then
-#     case "$1" in
-#       home)
-#         ${pkgs.coreutils-full}/bin/true
-#         pushd /etc/nixos/
-#         export NIXPKGS_ALLOW_INSECURE=1
-#         ${pkgs.nh}/bin/nh home switch /etc/nixos --ask
-#         popd
-#         ;;
-#       os)
-#         sudo ${pkgs.coreutils-full}/bin/true
-#         pushd /etc/nixos/
-#         ${pkgs.nh}/bin/nh os switch /etc/nixos --ask
-#         popd
-#         ;;
-#       all)
-#         sudo ${pkgs.coreutils-full}/bin/true
-#         pushd /etc/nixos/
-#         export NIXPKGS_ALLOW_INSECURE=1
-#         ${pkgs.nh}/bin/nh home switch /etc/nixos --ask
-#         ${pkgs.nh}/bin/nh os switch /etc/nixos --ask
-#         popd
-#         ;;
-#       *)
-#         ${pkgs.coreutils-full}/bin/echo "Usage: switch {home|os|all}"
-#         ;;
-#     esac
-#   else
-#     ${pkgs.coreutils-full}/bin/echo "ERROR! No nix-config found in /etc/nixos"
-#   fi
-# ''
-
 { pkgs }:
 let
   nh = "${pkgs.nh}/bin/nh";
+  nix-path = "/home/jackson/Documents/Code/nix";
 in
 pkgs.writeScriptBin "switch" ''
   #!${pkgs.nushell}/bin/nu --stdin
@@ -60,11 +25,11 @@ pkgs.writeScriptBin "switch" ''
     };
     if $os {
       print "Switching OS";
-      ${nh} os switch /etc/nixos --ask;
+      ${nh} os switch ${nix-path} --ask;
     };
     if $hm {
       print "Switching HM";
-      ${nh} home switch /etc/nixos --ask -- --impure;
+      ${nh} home switch ${nix-path} --ask -- --impure;
     };
   }
 ''
