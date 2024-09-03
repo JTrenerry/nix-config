@@ -165,7 +165,6 @@
         "${pkgs.hypridle}/bin/hypridle"
         "${pkgs.swww}/bin/swww init"
         "${pkgs.hyprlock}/bin/hyprlock"
-        "${pkgs.swww}/bin/swww img ${./wallpaper.jpg}"
         "${pkgs.waybar}/bin/waybar"
       ];
 
