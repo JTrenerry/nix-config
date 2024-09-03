@@ -7,12 +7,12 @@
     ./hyprland
     ./rofi.nix
     ./cava.nix
+    ./dunst.nix
     #    ./stylix.nix
   ];
 
   home.packages = with pkgs; [
     # NOTE Add user packages that have a gui here
-    dunst # Setup script
 
     # Important
     firefox
