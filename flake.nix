@@ -30,16 +30,25 @@
 
   outputs = { self, nixpkgs, lwjgl-overlay, ... }@inputs: let
     inherit (self) outputs;
+    stateVersion = "24.05";
     lib = import ./lib {
       inherit
         inputs
+        stateVersion
         outputs
         nixpkgs
         ;
     };
   in {
     nixosConfigurations = {
-      "glaceon" = nixpkgs.lib.nixosSystem {
+      "glaceon" = lib.mkHost {
+        hostname = "glaceon";
+        username = "jackson";
+        system = "x86_64-linux";
+        desktop = "mimi";
+      };
+
+      default = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         system = "x86_64-linux";
         modules = [
@@ -54,7 +63,15 @@
       };
     };
 
-
+    homeConfigurations = {
+      "jackson@glaceon" = lib.mkHome {
+        hostname = "glaceon";
+        username = "jackson";
+        system = "x86_64-linux";
+        shell = "mimi";
+        desktop = "mimi";
+      };
+    };
 
 
     devShells = lib.forAllSystems (
