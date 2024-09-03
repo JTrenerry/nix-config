@@ -1,16 +1,5 @@
 { pkgs, inputs, system, ... }:
 
-
-let
-  startupScript = pkgs.pkgs.writeShellScriptBin "start" ''
-    ${pkgs.hypridle}/bin/hypridle
-    ${pkgs.swww}/bin/swww init
-
-    ${pkgs.swww}/bin/swww img ${./wallpaper.jpg}
-    ${pkgs.swww}/bin/hyprlock
-    ${pkgs.waybar}/bin/waybar
-  '';
-in
 {
   imports = [
     inputs.hyprland.homeManagerModules.default
@@ -172,7 +161,13 @@ in
 
     settings = {
 
-      exec-once = ''${startupScript}/bin/start'';
+      exec-once = [
+        "${pkgs.hypridle}/bin/hypridle"
+        "${pkgs.swww}/bin/swww init"
+        "${pkgs.hyprlock}/bin/hyprlock"
+        "${pkgs.swww}/bin/swww img ${./wallpaper.jpg}"
+        "${pkgs.waybar}/bin/waybar"
+      ];
 
       monitor=",preferred,auto,1, bitdepth, 10";
 
