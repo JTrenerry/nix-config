@@ -28,19 +28,41 @@
     };
   };
 
-  outputs = { self, nixpkgs, lwjgl-overlay, ... }@inputs: {
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      system = "x86_64-linux";
-      modules = [
-        ({ pkgs, ...}: {
-          nixpkgs.overlays = [
-            (import (lwjgl-overlay + "/default.nix"))
-          ];
-        })
-        ./nixos/hosts/glaceon/configuration.nix
-        inputs.home-manager.nixosModules.default
-      ];
+  outputs = { self, nixpkgs, lwjgl-overlay, ... }@inputs: let
+    inherit (self) outputs;
+    lib = import ./lib {
+      inherit
+        inputs
+        outputs
+        nixpkgs
+        ;
     };
+  in {
+    nixosConfigurations = {
+      "glaceon" = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        system = "x86_64-linux";
+        modules = [
+          ({ pkgs, ...}: {
+            nixpkgs.overlays = [
+              (import (lwjgl-overlay + "/default.nix"))
+            ];
+          })
+          ./nixos/hosts/glaceon/configuration.nix
+          inputs.home-manager.nixosModules.default
+        ];
+      };
+    };
+
+
+
+
+    devShells = lib.forAllSystems (
+      system:
+      let
+        pkgs = nixpkgs.legacyPackages.${system};
+      in
+      import ./shell.nix { inherit pkgs; }
+    );
   };
 }
