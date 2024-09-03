@@ -6,6 +6,7 @@
     ./kitty.nix
     ./hyprland
     ./rofi.nix
+    ./stylix.nix
   ];
 
   home.packages = with pkgs; [
