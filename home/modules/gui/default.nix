@@ -6,6 +6,7 @@
     ./kitty.nix
     ./hyprland
     ./rofi.nix
+    ./cava.nix
     #    ./stylix.nix
   ];
 
