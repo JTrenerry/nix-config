@@ -173,8 +173,8 @@ in
   stylix = {
     enable = true;
     autoEnable = true;
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
-    homeManagerIntegration.autoImport = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
+    #homeManagerIntegration.autoImport = true;
   };
 
   # Some programs need SUID wrappers, can be configured further or are
