@@ -15,7 +15,7 @@
           horizontal_padding = 10;
           frame_width = 1;
           gap_size = 3;
-          font = "Monospace 14";
+          font = "Monospace 9";
 
           icon_theme = "rose-pine-icons";
           enable_recursive_icon_lookup = true;
