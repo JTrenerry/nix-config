@@ -24,6 +24,8 @@
     base16.url = "github:SenchoPens/base16.nix";
     stylix.url = "github:danth/stylix";
 
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+
     # 3200 overlay
     lwjgl-overlay = {
       url = "github:JTrenerry/gdx-nixos-overlay"; # Replace with the actual username/repo

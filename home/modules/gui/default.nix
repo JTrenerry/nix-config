@@ -9,6 +9,7 @@
     ./cava.nix
     ./dunst.nix
     ./stylix.nix
+    ./spotify.nix
   ];
 
   home.packages = with pkgs; [

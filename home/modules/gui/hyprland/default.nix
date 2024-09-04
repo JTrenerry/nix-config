@@ -4,6 +4,7 @@
   imports = [
     # TODO Import new tui modules here
     ./hyprland.nix
+    ./hyprlock.nix
     ./waybar.nix
   ];
 

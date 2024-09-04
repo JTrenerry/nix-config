@@ -1,28 +1,32 @@
-  { pkgs, lib, spicetify-nix, ... }:
+  { pkgs, lib, inputs, ... }:
 let
-  spicePkgs = spicetify-nix.packages.${pkgs.system}.default;
+  base          =  "#232136";
+  surface       =  "#2a273f";
+  overlay       =  "#393552";
+  muted         =  "#6e6a86";
+  subtle        =  "#908caa";
+  text          =  "#e0def4";
+  love          =  "#eb6f92";
+  gold          =  "#f6c177";
+  rose          =  "#ea9a97";
+  pine          =  "#3e8fb0";
+  foam          =  "#9ccfd8";
+  iris          =  "#c4a7e7";
+  highlightLow  =  "#2a283e";
+  highlightMed  =  "#44415a";
+  highlightHigh =  "#56526e";
+
 in
 {
-  # allow spotify to be installed if you don't have unfree enabled already
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "spotify"
-  ];
+  imports = [ inputs.spicetify-nix.homeManagerModules.default ];
 
-  # import the flake's module for your system
-  imports = [ spicetify-nix.homeManagerModule ];
-
-  # configure spicetify :)
-    programs = {
-      spicetify = {
-        enable = true;
-        theme = spicePkgs.themes.rose-pine;
-        colorScheme = "moon";
-
-        enabledExtensions = with spicePkgs.extensions; [
-          fullAppDisplay
-          shuffle # shuffle+ (special characters are sanitized out of ext names)
-          hidePodcasts
-        ];
-      };
-    };
+  programs.spicetify =
+  let
+    spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.system};
+  in
+  {
+    enable = true;
+    theme = spicePkgs.themes.text;
+    colorScheme = "rose-pine-moon";
+  };
 }
