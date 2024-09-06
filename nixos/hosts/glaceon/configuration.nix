@@ -142,15 +142,6 @@ in
 
   nixpkgs.config.allowUnfree = true; # Allows unfree packages
 
-  home-manager = {
-    # also pass inputs to home-manager modules
-    extraSpecialArgs = { inherit inputs; };
-    useGlobalPkgs = true;
-    users = {
-      "jackson" = import ../../../home/hosts/glaceon/default.nix;
-    };
-  };
-
   programs.hyprland.enable = true;
   programs.hyprland.package = inputs.hyprland.packages."${pkgs.system}".hyprland;
 

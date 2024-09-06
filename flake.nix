@@ -23,7 +23,11 @@
 
     base16.url = "github:SenchoPens/base16.nix";
     stylix.url = "github:danth/stylix";
-    # stylix.inputs.base16.follows = "base16";
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # 3200 overlay
     lwjgl-overlay = {
@@ -32,19 +36,58 @@
     };
   };
 
-  outputs = { self, nixpkgs, lwjgl-overlay, ... }@inputs: {
-    nixosConfigurations.default = nixpkgs.lib.nixosSystem {
-      specialArgs = {inherit inputs;};
-      system = "x86_64-linux";
-      modules = [
-        ({ pkgs, ...}: {
-          nixpkgs.overlays = [
-            (import (lwjgl-overlay + "/default.nix"))
-          ];
-        })
-        ./nixos/hosts/glaceon/configuration.nix
-        inputs.home-manager.nixosModules.default
-      ];
+  outputs = { self, nixpkgs, lwjgl-overlay, ... }@inputs: let
+    inherit (self) outputs;
+    stateVersion = "24.05";
+    lib = import ./lib {
+      inherit
+        inputs
+        stateVersion
+        outputs
+        nixpkgs
+        ;
     };
+  in {
+    nixosConfigurations = {
+      "glaceon" = lib.mkHost {
+        hostname = "glaceon";
+        username = "jackson";
+        system = "x86_64-linux";
+        desktop = "mimi";
+      };
+
+      default = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        system = "x86_64-linux";
+        modules = [
+          ({ pkgs, ...}: {
+            nixpkgs.overlays = [
+              (import (lwjgl-overlay + "/default.nix"))
+            ];
+          })
+          ./nixos/hosts/glaceon/configuration.nix
+          inputs.home-manager.nixosModules.default
+        ];
+      };
+    };
+
+    homeConfigurations = {
+      "jackson@glaceon" = lib.mkHome {
+        hostname = "glaceon";
+        username = "jackson";
+        system = "x86_64-linux";
+        shell = "mimi";
+        desktop = "mimi";
+      };
+    };
+
+
+    devShells = lib.forAllSystems (
+      system:
+      let
+        pkgs = nixpkgs.legacyPackages.${system};
+      in
+      import ./shell.nix { inherit pkgs; }
+    );
   };
 }

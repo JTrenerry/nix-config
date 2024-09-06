@@ -1,9 +1,0 @@
-[submodule "nixos/hosts/glaceon/gdx"]
-	path = nixos/hosts/glaceon/gdx
-	url = git@github.com:plapadoo/gdx-nixos-overlay.git
-[submodule "home/modules/gui/hyprland/waybar-themes"]
-	path = home/modules/gui/hyprland/waybar-themes
-	url = git@github.com:rose-pine/waybar.git
-[submodule "overlays/gdx-nixos-overlay"]
-	path = overlays/gdx-nixos-overlay
-	url = git@github.com:plapadoo/gdx-nixos-overlay.git

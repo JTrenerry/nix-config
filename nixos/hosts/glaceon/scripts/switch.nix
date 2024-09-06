@@ -1,0 +1,35 @@
+{ pkgs }:
+let
+  nh = "${pkgs.nh}/bin/nh";
+  nix-path = "/home/jackson/Documents/Code/nix";
+in
+pkgs.writeScriptBin "switch" ''
+  #!${pkgs.nushell}/bin/nu --stdin
+
+  def main [
+    --os (-o) # Optional parameter to switch only os configuration
+    --hm (-h) # Optional parameter to switch only home configuration
+  ] {
+    if not ("/etc/nixos/flake.nix" | path exists) {
+      error make { msg: "No nix-config found in /etc/nixos" };
+    }
+    $env.NIXPKGS_ALLOW_INSECURE = "1";
+
+    mut os = $os;
+    mut hm = $hm;
+
+    if $os == $hm { # Both or neither were  specified
+      print "Switching OS then HM";
+      $os = true;
+      $hm = true;
+    };
+    if $os {
+      print "Switching OS";
+      ${nh} os switch ${nix-path} --ask;
+    };
+    if $hm {
+      print "Switching HM";
+      ${nh} home switch ${nix-path} --ask -- --impure;
+    };
+  }
+''
