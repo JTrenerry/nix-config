@@ -24,7 +24,10 @@
     base16.url = "github:SenchoPens/base16.nix";
     stylix.url = "github:danth/stylix";
 
-    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # 3200 overlay
     lwjgl-overlay = {

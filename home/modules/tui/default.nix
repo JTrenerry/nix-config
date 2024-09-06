@@ -5,7 +5,7 @@
     # TODO Import new tui modules here
     ./git.nix
     ./tmux.nix
-    ./neofetch.nix
+    ./fastfetch.nix
 
     ./shell
     ./neovim
@@ -40,10 +40,11 @@
 
       # Misc
       kittysay
-      fastfetch
       imagemagick
       borgbackup
       tree
+      unzip
+      zip
 
       # Connections
       bluetuith

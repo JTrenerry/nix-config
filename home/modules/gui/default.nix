@@ -4,12 +4,13 @@
   imports = [
     # TODO Import new tui modules here
     ./kitty.nix
-    ./hyprland
-    ./rofi.nix
     ./cava.nix
     ./dunst.nix
     ./stylix.nix
     ./spotify.nix
+
+    ./hyprland
+    ./rofi
   ];
 
   home.packages = with pkgs; [
@@ -31,8 +32,6 @@
     zoom-us
 
     # Misc
-    spotify
-    spicetify-cli
     blueman # bluetooth
     pavucontrol # audio
     networkmanagerapplet # network
@@ -45,6 +44,5 @@
     rose-pine-cursor
     rose-pine-gtk-theme
     rose-pine-icon-theme
-
   ];
 }
