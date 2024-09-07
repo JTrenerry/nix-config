@@ -20,6 +20,6 @@
       waybar.enable = false;
     };
     base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
-    image = ../gui/hyprland/wallpaper.jpg;
+    image = ~/.wallpaper.jpg;
   };
 }

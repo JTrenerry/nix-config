@@ -44,5 +44,9 @@
     rose-pine-cursor
     rose-pine-gtk-theme
     rose-pine-icon-theme
+
+    # TEMP
+    eclipses.eclipse-sdk
+    zulu21
   ];
 }

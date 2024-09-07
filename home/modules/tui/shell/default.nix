@@ -1,6 +1,7 @@
 {
   imports = [
     # TODO Import new stuff here
+    ./starship.nix
   ];
 
   home = {
@@ -18,13 +19,6 @@
       enable = true;
 
       bashrcExtra = ''eval "$(direnv hook bash)"'';
-    };
-
-    starship = {
-      enable = true;
-      settings = {
-
-      };
     };
   };
 }
