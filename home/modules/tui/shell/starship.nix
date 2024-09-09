@@ -29,7 +29,7 @@ in
 
       fill = {
         style = "fg:${overlay}";
-        symbol = " 󰧱  󰉊 ";
+        symbol = " ";
       };
 
       username = {
@@ -46,7 +46,7 @@ in
         truncation_length = 3;
         truncation_symbol = "…/";
         substitutions = {
-          "Documents" = "󰈙 ";
+          "Documents" = "󰈙";
           "Downloads" = " ";
           "Music" = " ";
           "Pictures" = " ";

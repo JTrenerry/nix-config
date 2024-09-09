@@ -18,35 +18,26 @@
 
     # Important
     firefox
-    brightnessctl
+    brightnessctl # Brightness should probs be in tui
 
-    # IM
+    # IM / Editors
     vesktop # to do be moved for conf stuff
 
-    # IDEs
-    jetbrains.idea-ultimate
     xorg.xrandr
 
-    # Office / Productivity
-    libreoffice-fresh
-    zoom-us
+    # Office / Productivity / IDE
+    jetbrains.idea-ultimate # Java IDE
+    notesnook # Note taking app
+    libreoffice-fresh # Text editor
+    zoom-us # Work
 
     # Misc
     blueman # bluetooth
     pavucontrol # audio
     networkmanagerapplet # network
-    postman
+    postman # API docs
     grimblast #screenshot
     hyprlock # lockscreen
-    pinta
-
-    # LOML
-    rose-pine-cursor
-    rose-pine-gtk-theme
-    rose-pine-icon-theme
-
-    # TEMP
-    eclipses.eclipse-sdk
-    zulu21
+    pinta # Image Editing
   ];
 }

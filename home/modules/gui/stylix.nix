@@ -19,7 +19,16 @@
       nixvim.enable = false;
       waybar.enable = false;
     };
+
     base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
     image = ~/.wallpaper.jpg;
+
+    cursor = {
+      package = pkgs.rose-pine-cursor;
+      #name = "RosePine";
+      #package = pkgs.qogir-icon-theme;
+      #name = "Qogir";
+      size = 50;
+    };
   };
 }
