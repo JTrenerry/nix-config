@@ -13,9 +13,8 @@ _: {
       };
 
       modules = [
-          "title"
+        "title"
         "separator"
-        "cursor"
           {
               type = "os";
               key = " OS";
