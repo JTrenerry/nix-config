@@ -40,6 +40,8 @@
 
       # Misc
       kittysay
+      uwuify
+      lolcat
       imagemagick
       borgbackup
       tree

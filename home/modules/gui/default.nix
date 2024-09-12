@@ -39,5 +39,6 @@
     grimblast #screenshot
     hyprlock # lockscreen
     pinta # Image Editing
+    foot
   ];
 }

@@ -12,14 +12,14 @@
     [
       #inputs.nix-index-database.nixosModules.nix-index
       #./common/base # Core configuration for ALL nixos systems
-      #./common/scripts # Useful scripts to have on path
+      ./common/scripts # Useful scripts to have on path for any computer i.e. switch
       #./common/services/firewall.nix # firewall configuration
       #./common/services/openssh.nix # openssh configuration
       #./common/programs/sops.nix # SOPS secret management
       #./common/users/root # sudo/root user configuration
       #./common/kernels/${kernel} # kernel selection
-      #./common/programs/nh.nix # nix helper
-      ./hosts/${hostname}/configuration.nix # host specific configuration TODO CHANGE TO default.nix
+      ./common/programs/nh.nix # nix helper
+      ./hosts/${hostname} # host specific configuration TODO CHANGE TO default.nix
     ];
       # ++ lib.optional (builtins.pathExists (
       #   ./. + "/common/users/${username}"

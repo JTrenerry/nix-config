@@ -7,9 +7,10 @@
 {
   programs.nh = {
     enable = true;
+    # flake = /etc/nixos;
   };
 
   environment.sessionVariables = {
-    FLAKE = lib.mkForce "/home/jackson/Documents/Code/nix";
+    FLAKE = lib.mkForce "/etc/nixos";
   };
 }

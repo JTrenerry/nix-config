@@ -10,8 +10,8 @@ in
   programs = {
     spicetify = {
       enable = true;
-      theme = spicePkgs.themes.text;
-      colorScheme = "RosePineMoon";
+      theme = spicePkgs.themes.ziro;
+      colorScheme = "rose-pine-moon";
     };
   };
 }
