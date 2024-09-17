@@ -30,8 +30,10 @@
     # XSERVER
     xserver= {
       enable = true;
-      layout = "us";
-      variant = "";
+      xkb = {
+        layout = "us";
+        variant = "";
+      };
       # Enable touchpad support (enabled default in most desktopManager).
       # libinput.enable = true;
     };

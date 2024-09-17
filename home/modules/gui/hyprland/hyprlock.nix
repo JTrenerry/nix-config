@@ -37,7 +37,7 @@ in
       background = [
         {
           monitor = "";
-          path = "$HOME/.wallpaper.jpg";
+          path = "$HOME/.wallpaper";
           blur_passes = 0;
           color = base;
         }
@@ -74,7 +74,7 @@ in
       image = [
         {
           monitor = "";
-          path = "$HOME/.face.png";
+          path = "$HOME/.face";
           size = "300";
           rounding = -1;
           border_size = 0;

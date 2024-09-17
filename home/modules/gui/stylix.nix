@@ -21,7 +21,7 @@
     };
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
-    image = ~/.wallpaper.jpg;
+    image = ~/.wallpaper;
 
     cursor = {
       package = pkgs.rose-pine-cursor;

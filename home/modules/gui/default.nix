@@ -15,6 +15,7 @@
 
   home.packages = with pkgs; [
     # NOTE Add user packages that have a gui here
+    rpi-imager
 
     # Important
     firefox
@@ -27,7 +28,7 @@
 
     # Office / Productivity / IDE
     jetbrains.idea-ultimate # Java IDE
-    notesnook # Note taking app
+    obsidian # Note taking app
     libreoffice-fresh # Text editor
     zoom-us # Work
 

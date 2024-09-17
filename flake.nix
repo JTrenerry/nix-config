@@ -56,18 +56,10 @@
         desktop = "mimi";
       };
 
-      default = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
-        system = "x86_64-linux";
-        modules = [
-          ({ pkgs, ...}: {
-            nixpkgs.overlays = [
-              (import (lwjgl-overlay + "/default.nix"))
-            ];
-          })
-          ./nixos/hosts/glaceon/configuration.nix
-          inputs.home-manager.nixosModules.default
-        ];
+      "pip" = lib.mkHost {
+        hostname = "pip";
+        username = "jackson";
+        system = "aarch64-linux";
       };
     };
 
@@ -79,8 +71,14 @@
         shell = "mimi";
         desktop = "mimi";
       };
-    };
 
+      "jackson@pip" = lib.mkHome {
+        hostname = "pip";
+        username = "jackson";
+        system = "aarch64-linux";
+        shell = "punk";
+      };
+    };
 
     devShells = lib.forAllSystems (
       system:

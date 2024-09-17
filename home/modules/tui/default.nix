@@ -52,7 +52,6 @@
       bluetuith
       bluez
       nodejs_20
-      gradle
     ];
 
     sessionVariables = {
