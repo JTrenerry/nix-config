@@ -54,6 +54,7 @@
         username = "jackson";
         system = "x86_64-linux";
         desktop = "mimi";
+        nix-path = "/home/jackson/Documents/nix";
       };
 
       "pip" = lib.mkHost {

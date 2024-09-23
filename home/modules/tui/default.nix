@@ -43,7 +43,6 @@
       uwuify
       lolcat
       imagemagick
-      borgbackup
       tree
       unzip
       zip
@@ -51,7 +50,6 @@
       # Connections
       bluetuith
       bluez
-      nodejs_20
     ];
 
     sessionVariables = {

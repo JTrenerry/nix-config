@@ -5,6 +5,7 @@
   lib,
   username,
   kernel,
+  nix-path,
   ...
 }:
 {
@@ -19,7 +20,7 @@
       #./common/users/root # sudo/root user configuration
       #./common/kernels/${kernel} # kernel selection
       ./common/programs/nh.nix # nix helper
-      ./hosts/${hostname} # host specific configuration TODO CHANGE TO default.nix
+      ./hosts/${hostname} # host specific configuration
     ];
       # ++ lib.optional (builtins.pathExists (
       #   ./. + "/common/users/${username}"
