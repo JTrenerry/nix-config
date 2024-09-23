@@ -35,6 +35,7 @@
       exec-once = [
         "${pkgs.hypridle}/bin/hypridle"
         "${pkgs.swww}/bin/swww init"
+        "${pkgs.swww}/bin/swww img ~/.wallpaper"
         "${pkgs.hyprlock}/bin/hyprlock"
         "${pkgs.waybar}/bin/waybar"
       ];

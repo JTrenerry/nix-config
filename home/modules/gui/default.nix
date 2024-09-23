@@ -39,7 +39,6 @@
     postman # API docs
     grimblast #screenshot
     hyprlock # lockscreen
-    pinta # Image Editing
     foot
   ];
 }
