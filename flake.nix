@@ -56,10 +56,10 @@
         desktop = "mimi";
       };
 
-      "pip" = lib.mkHost {
-        hostname = "pip";
+      "mimikyu" = lib.mkHost {
+        hostname = "mimikyu";
         username = "jackson";
-        system = "aarch64-linux";
+        system = "x86_64-linux";
       };
     };
 
@@ -72,10 +72,10 @@
         desktop = "mimi";
       };
 
-      "jackson@pip" = lib.mkHome {
-        hostname = "pip";
+      "jackson@mimikyu" = lib.mkHome {
+        hostname = "mimikyu";
         username = "jackson";
-        system = "aarch64-linux";
+        system = "x86_64-linux";
         shell = "punk";
       };
     };
