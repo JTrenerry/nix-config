@@ -2,11 +2,8 @@
   imports = [
     # TODO Import new stuff here
     ./starship.nix
+    ./aliases.nix
   ];
-
-  home = {
-    shellAliases = import ./aliases.nix;
-  };
 
   programs = {
     direnv = {

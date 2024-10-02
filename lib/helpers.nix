@@ -1,17 +1,17 @@
 { inputs, stateVersion, outputs, nixpkgs, ... }: {
   # Helper function for generating home-manager configs
-  mkHome = { hostname, username, desktop ? null, shell ? null, system ? "x86_64-linux" }: inputs.home-manager.lib.homeManagerConfiguration {
+  mkHome = { hostname, username, desktop ? null, shell ? null, system ? "x86_64-linux", nix-path ? "/etc/nixos" }: inputs.home-manager.lib.homeManagerConfiguration {
     pkgs = inputs.nixpkgs.legacyPackages.${system};
     extraSpecialArgs = {
-      inherit inputs outputs desktop hostname system username stateVersion shell;
+      inherit inputs outputs desktop hostname system username stateVersion shell nix-path;
     };
     modules = [ ../home ];
   };
 
   # Helper function for generating host configs
-  mkHost = { hostname, username, desktop ? null, installer ? null, system ? "x86_64-linux", kernel ? "latest" }: inputs.nixpkgs.lib.nixosSystem {
+  mkHost = { hostname, username, desktop ? null, installer ? null, system ? "x86_64-linux", kernel ? "latest", nix-path ? "/etc/nixos"}: inputs.nixpkgs.lib.nixosSystem {
     specialArgs = {
-      inherit inputs outputs desktop hostname system username stateVersion nixpkgs kernel;
+      inherit inputs outputs desktop hostname system username stateVersion nixpkgs kernel nix-path;
     };
     modules = [
       ../nixos

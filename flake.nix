@@ -53,7 +53,7 @@
         hostname = "glaceon";
         username = "jackson";
         system = "x86_64-linux";
-        desktop = "mimi";
+        desktop = "rose";
         nix-path = "/home/jackson/Documents/nix";
       };
 
@@ -61,6 +61,7 @@
         hostname = "mimikyu";
         username = "jackson";
         system = "x86_64-linux";
+        nix-path = "/home/jackson/nix-config";
       };
     };
 
@@ -69,8 +70,9 @@
         hostname = "glaceon";
         username = "jackson";
         system = "x86_64-linux";
-        shell = "mimi";
-        desktop = "mimi";
+        shell = "rose";
+        desktop = "rose";
+        nix-path = "/home/jackson/Documents/nix";
       };
 
       "jackson@mimikyu" = lib.mkHome {
@@ -78,6 +80,7 @@
         username = "jackson";
         system = "x86_64-linux";
         shell = "punk";
+        nix-path = "/home/jackson/nix-config";
       };
     };
 

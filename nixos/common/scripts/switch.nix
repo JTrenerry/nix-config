@@ -1,7 +1,6 @@
-{ pkgs }:
+{ pkgs, nix-path }:
 let
   nh = "${pkgs.nh}/bin/nh";
-  nix-path = "/home/jackson/Documents/Code/nix";
 in
 pkgs.writeScriptBin "switch" ''
   #!${pkgs.nushell}/bin/nu --stdin
@@ -10,7 +9,7 @@ pkgs.writeScriptBin "switch" ''
     --os (-o) # Optional parameter to switch only os configuration
     --hm (-h) # Optional parameter to switch only home configuration
   ] {
-    if not ("/etc/nixos/flake.nix" | path exists) {
+    if not ("${nix-path}/flake.nix" | path exists) {
       error make { msg: "No nix-config found in /etc/nixos" };
     }
     $env.NIXPKGS_ALLOW_INSECURE = "1";

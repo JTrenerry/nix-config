@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  nix-path,
   ...
 }:
 {
@@ -11,6 +12,6 @@
   };
 
   environment.sessionVariables = {
-    FLAKE = lib.mkForce "/etc/nixos";
+    FLAKE = lib.mkForce "${nix-path}";
   };
 }
