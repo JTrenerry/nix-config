@@ -5,7 +5,7 @@
     # TODO Import new tui modules here
     ./kitty.nix
     ./cava.nix
-    ./dunst.nix
+    #./dunst.nix    replaced by ags
     ./stylix.nix
     ./spotify.nix
 
