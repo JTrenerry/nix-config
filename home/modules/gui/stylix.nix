@@ -18,6 +18,7 @@
       kitty.enable = false;
       nixvim.enable = false;
       waybar.enable = false;
+      gtk.enable = false;
     };
 
     base16Scheme = "${pkgs.base16-schemes}/share/themes/rose-pine-moon.yaml";
