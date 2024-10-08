@@ -37,7 +37,7 @@
         "${pkgs.swww}/bin/swww init"
         "${pkgs.swww}/bin/swww img ~/.wallpaper"
         "${pkgs.hyprlock}/bin/hyprlock"
-        "${pkgs.ags}/bin/ags"
+        "ags -b hypr -c /home/jackson/Documents/Code/nix/home/hosts/glaceon/ags/config.js"
       ];
 
       monitor=",preferred,auto,1, bitdepth, 10";
