@@ -65,6 +65,7 @@
         configPackages = [];
       };
     };
+    blueman.enable = true;
   };
 
   # BOOTLOADER
