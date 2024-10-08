@@ -19,7 +19,7 @@ let
   left-border = "[](fg:${overlay})";
   right-border = "[](fg:${overlay})";
 
-  languages = "$c $elixir $elm $golang $haskell $java $julia $nodejs $nim $rust $scala $python";
+  languages = "$c$elixir$elm$golang$haskell$java$julia$nodejs$nim$rust$scala$python";
 in
 {
   programs.starship = {
