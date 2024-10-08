@@ -3,6 +3,12 @@
   # add the home manager module
   imports = [ inputs.ags.homeManagerModules.default ];
 
+  home.packages = with pkgs; [
+    # NOTE Add user packages that are for ags here
+    gvfs
+    rose-pine-gtk-theme
+    rose-pine-icon-theme
+  ];
   programs.ags = {
     enable = true;
 

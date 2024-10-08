@@ -5,7 +5,7 @@
     # TODO Import new tui modules here
     ./kitty.nix
     ./cava.nix
-    #./dunst.nix    replaced by ags
+    #./dunst.nix
     ./stylix.nix
     ./spotify.nix
 
@@ -42,8 +42,5 @@
     hyprlock # lockscreen
     pinta
     xfce.thunar
-
-    rose-pine-gtk-theme
-    rose-pine-icon-theme
   ];
 }
