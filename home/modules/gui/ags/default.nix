@@ -6,6 +6,8 @@
   home.packages = with pkgs; [
     # NOTE Add user packages that are for ags here
     gvfs
+    upower
+
     rose-pine-gtk-theme
     rose-pine-icon-theme
   ];
