@@ -37,7 +37,7 @@
         "${pkgs.swww}/bin/swww init"
         "${pkgs.swww}/bin/swww img ~/.wallpaper"
         "${pkgs.hyprlock}/bin/hyprlock"
-        "${pkgs.waybar}/bin/waybar"
+        "ags"
       ];
 
       monitor=",preferred,auto,1, bitdepth, 10";

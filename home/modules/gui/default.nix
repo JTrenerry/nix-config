@@ -2,16 +2,16 @@
 
 {
   imports = [
-    # TODO Import new tui modules here
+    # TODO Import new gui modules here
     ./kitty.nix
     ./cava.nix
-    #./dunst.nix
+    ./dunst.nix # to be replaced by ags
     ./stylix.nix
     ./spotify.nix
 
     ./ags
     ./hyprland
-    ./rofi
+    ./rofi # to be replaced by ags
   ];
 
   home.packages = with pkgs; [

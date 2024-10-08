@@ -5,7 +5,7 @@
     # TODO Import new tui modules here
     ./hyprland.nix
     ./hyprlock.nix
-    ./waybar.nix
+    #./waybar.nix replaced by ags
   ];
 
   home.packages = with pkgs; [
