@@ -1,0 +1,9 @@
+[submodule "ags"]
+	path = ags
+	url = git@github.com:JTrenerry/ags.git
+[submodule "home/hosts/glaceon/ags-rose"]
+	path = home/hosts/glaceon/ags-rose
+	url = git@github.com:JTrenerry/ags-rose.git
+[submodule "home/hosts/glaceon/ags"]
+	path = home/hosts/glaceon/ags
+	url = git@github.com:JTrenerry/ags-rose.git

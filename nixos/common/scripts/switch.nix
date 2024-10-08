@@ -10,7 +10,7 @@ pkgs.writeScriptBin "switch" ''
     --hm (-h) # Optional parameter to switch only home configuration
   ] {
     if not ("${nix-path}/flake.nix" | path exists) {
-      error make { msg: "No nix-config found in /etc/nixos" };
+      error make { msg: "No nix-config found in ${nix-path}" };
     }
     $env.NIXPKGS_ALLOW_INSECURE = "1";
 

@@ -46,6 +46,7 @@
       tree
       unzip
       zip
+      htop
 
       # Connections
       bluetuith

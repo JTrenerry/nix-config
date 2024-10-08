@@ -29,14 +29,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    # 3200 overlay
-    lwjgl-overlay = {
-      url = "github:JTrenerry/gdx-nixos-overlay"; # Replace with the actual username/repo
-      flake = false;
-    };
+    ags.url = "github:Aylur/ags";
   };
 
-  outputs = { self, nixpkgs, lwjgl-overlay, ... }@inputs: let
+  outputs = { self, nixpkgs, ... }@inputs: let
     inherit (self) outputs;
     stateVersion = "24.05";
     lib = import ./lib {
@@ -54,7 +50,7 @@
         username = "jackson";
         system = "x86_64-linux";
         desktop = "rose";
-        nix-path = "/home/jackson/Documents/nix";
+        nix-path = "/home/jackson/Documents/Code/nix";
       };
 
       "mimikyu" = lib.mkHost {
@@ -72,7 +68,7 @@
         system = "x86_64-linux";
         shell = "rose";
         desktop = "rose";
-        nix-path = "/home/jackson/Documents/nix";
+        nix-path = "/home/jackson/Documents/Code/nix";
       };
 
       "jackson@mimikyu" = lib.mkHome {

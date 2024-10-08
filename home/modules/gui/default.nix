@@ -9,6 +9,7 @@
     ./stylix.nix
     ./spotify.nix
 
+    ./ags
     ./hyprland
     ./rofi
   ];
@@ -39,6 +40,10 @@
     postman # API docs
     grimblast #screenshot
     hyprlock # lockscreen
-    foot
+    pinta
+    xfce.thunar
+
+    rose-pine-gtk-theme
+    rose-pine-icon-theme
   ];
 }

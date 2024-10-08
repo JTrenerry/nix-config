@@ -13,7 +13,7 @@
   programs.home-manager.enable = true;
 
   imports =
-    [ ]
+    [ ./hosts/${hostname} ]
     #  ++ lib.optional (builtins.isPath (./. + "common/users/${username}")) ./common/users/${username}
     #  ++ lib.optional (builtins.isPath (
     #    ./. + "common/users/${username}/hosts/${hostname}"
