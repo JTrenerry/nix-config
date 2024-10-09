@@ -2,9 +2,17 @@
 .
 ├── home
 │   ├── hosts
-│   │   └── glaceon
+│   │   ├── glaceon
+│   │   │   └── ags
+│   │   │       ├── lib
+│   │   │       └── widget
+│   │   │           ├── bar
+│   │   │           │   └── modules
+│   │   │           └── notifications
+│   │   └── mimikyu
 │   └── modules
 │       ├── gui
+│       │   ├── ags
 │       │   ├── hyprland
 │       │   └── rofi
 │       └── tui
@@ -19,7 +27,9 @@
     │   ├── programs
     │   └── scripts
     └── hosts
-        └── glaceon
-            ├── gdx
+        ├── glaceon
+        │   └── scripts
+        ├── maushold
+        └── mimikyu
             └── scripts
 ```
